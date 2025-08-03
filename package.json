@@ -1,0 +1,16 @@
+{
+  "name": "portfolio-backend",
+  "version": "1.0.0",
+  "description": "Backend for S K Ismail's Portfolio Contact Form",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "S K Ismail",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.8"
+  }
+}
