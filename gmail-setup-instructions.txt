@@ -1,0 +1,40 @@
+📧 GMAIL SETUP INSTRUCTIONS FOR EMAIL OTP
+
+🔧 STEP 1: Get Gmail App Password
+1. Go to https://myaccount.google.com/
+2. Click "Security" in left menu
+3. Enable "2-Step Verification" if not already enabled
+4. Click "App passwords" 
+5. Select "Mail" from dropdown
+6. Click "Generate"
+7. Copy the 16-character password (example: abcd efgh ijkl mnop)
+
+🔧 STEP 2: Update .env File
+Open the .env file in your project folder and replace:
+EMAIL_PASS=temp-password
+
+With your actual app password:
+EMAIL_PASS=abcdefghijklmnop
+
+(Remove spaces from the app password)
+
+🔧 STEP 3: Restart Server
+Stop the current server (Ctrl+C) and restart:
+node server.js
+
+✅ VERIFICATION:
+- Go to http://localhost:3000/admin/forgot-password
+- Enter: skportfolio57@gmail.com
+- Select "Email OTP"
+- Check your Gmail inbox for the OTP email
+
+⚠️ TROUBLESHOOTING:
+- Make sure 2-Step Verification is enabled on your Google account
+- Use the 16-character app password, not your regular Gmail password
+- Remove all spaces from the app password
+- Check spam folder if email doesn't arrive
+
+📱 CURRENT WORKING METHODS:
+- Console OTP: Works for both email and SMS (check server console)
+- Email OTP: Will work after Gmail setup
+- SMS OTP: Shows in console (no SMS service configured)

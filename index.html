@@ -4,7 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>S K Ismail | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Font (Poppins for Gagan style) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="gallery.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -26,15 +35,29 @@
 
 <!-- Home Section -->
 <section id="home" class="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <img src="_images/bg.jpg" alt="hero background" loading="eager" />
+  </div>
   <div class="overlay">
     <div class="intro-text">
       <p>Hello, I am</p>
       <h1>S K Ismail</h1>
-      <h3>And I am a <span class="animated-role"></span></h3>
+      <h3>And I am a <span class="animated-role">Full Stack Web Developer!</span></h3>
       <a href="#about" class="about-btn">About Me</a>
     </div>
   </div>
 </section>
+
+<!-- Circular Progress Indicator - Global (Outside all sections) -->
+<div class="progress-circle">
+  <svg width="70" height="70" viewBox="0 0 70 70">
+    <circle cx="35" cy="35" r="32" class="progress-bg"/>
+    <circle cx="35" cy="35" r="32" class="progress-bar"/>
+  </svg>
+  <div class="progress-text">
+    <span class="percentage">0</span>
+  </div>
+</div>
 
 <!-- About Section -->
 <section id="about">
@@ -43,152 +66,618 @@
   <div class="about-container">
     <img src="_images/your-photo.jpg" alt="Profile Photo" />
     <div class="about-text">
-      <h3>I'm S K Ismail and I am a <span>Machine Learning Engineer</span></h3>
+      <h3>I'm S K Ismail and I am a <span class="animated-role">Machine Learning Engineer</span></h3>
       <p>
-        Hi there! I'm a 22 yr old developer with over 2 years of project development experience.
-        I explore the latest technologies, enjoy chess and movies, and continuously upgrade myself. 
-        I hold a B.E. in AI & ML from City Engineering College, Bengaluru. I'm experienced in Full Stack Web Development,
-        Python, SQL, and Machine Learning, and I love leading teams with a friendly spirit.
-        You can explore my skills, projects, certificates, and achievements below.
+        I'm passionate and driven in the field of Artificial Intelligence and Machine Learning (AIML) from City Engineering College, Bengaluru (Batch of 2025) I've built hands-on experience through internships and academic projects involving Python, SQL, Flask, Docker, and DevOps pipelines. I'm skilled in tools and libraries such as Pandas, NumPy, TensorFlow, Scikit-learn, and GitHub, with a strong interest in solving real-world problems using AI and automation.
       </p>
+      <p>
+        Along with my B.E., I also hold a Diploma in Computer Science (2018–2020) from Sri Venkateshwara Polytechnic, which gave me a strong programming and database foundation. I'm actively seeking full-time job opportunities in software development, AI/ML, or DevOps, where I can apply my skills and grow in a collaborative team environment.
+      </p>
+      <p>you can know more about my Qualification, Skills, Experties, Works, Presentations, Achivements etc....</p>
+      <a href="#qualification" class="section-nav-btn">My Qualification</a>
     </div>
   </div>
 </section>
 
 <!-- Skills Section -->
 <section id="skills">
-  <h2 class="section-title">Skills</h2>
-  <div class="skills-container">
-    <div class="skill-card">Python</div>
-    <div class="skill-card">SQL</div>
-    <div class="skill-card">HTML</div>
-    <div class="skill-card">CSS</div>
-    <div class="skill-card">JavaScript</div>
-    <div class="skill-card">PHP</div>
-    <div class="skill-card">Node.js</div>
-    <div class="skill-card">React.js</div>
-    <div class="skill-card">MongoDB</div>
-    <div class="skill-card">MySQL</div>
-    <div class="skill-card">Machine Learning</div>
+  <h2 class="skills-heading-btn">My Skills</h2>
+  <p class="sub">— what I do  —</p>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <i class="fas fa-paint-brush"></i>
+      <h3>AI Development</h3>
+      <p>Python, Pandas, NumPy, Excel, Kaggle, Hugging Face, scikit-learn, Google Colab, Blackbox AI, ChatGPT</p>
+    </div>
+    <div class="skill-card">
+      <i class="fas fa-chart-line"></i>
+      <h3>Data Science</h3>
+      <p>Python, Pandas, NumPy, Excel, WEKA, Tableau, GPT Excel, Blackbox AI, ChatGPT, Gemini</p>
+    </div>
+    <div class="skill-card">
+      <i class="fas fa-code"></i>
+      <h3>Web Development</h3>
+      <p>HTML, CSS, JavaScript, PHP, MySQL, Python, AngularJS, MS Access, Blackbox AI</p>
+    </div>
   </div>
 </section>
 
 <!-- Expertise Section -->
 <section id="experties">
-  <h2 class="section-title">Expertise</h2>
+  <h2>My Experties</h2>
+  <p class="sub">— My creative skills & experiences. —</p>
   <div class="experties-container">
     <div class="expertise-card">
-      <h3>Frontend Development</h3>
-      <p>HTML, CSS, JS, React.js</p>
+      <h3>SEO</h3>
+      <div class="progress-bar"><div class="progress-fill" data-width="90%"></div></div>
+      <span class="percentage">90%</span>
     </div>
     <div class="expertise-card">
-      <h3>Backend Development</h3>
-      <p>Node.js, PHP, MongoDB, MySQL</p>
+      <h3>HTML</h3>
+      <div class="progress-bar"><div class="progress-fill" data-width="90%"></div></div>
+      <span class="percentage">90%</span>
     </div>
     <div class="expertise-card">
-      <h3>Machine Learning</h3>
-      <p>Python, Pandas, scikit-learn, Flask</p>
+      <h3>CSS</h3>
+      <div class="progress-bar"><div class="progress-fill" data-width="70%"></div></div>
+      <span class="percentage">70%</span>
     </div>
     <div class="expertise-card">
-      <h3>Full Stack Projects</h3>
-      <p>Frontend + Backend + Deployment</p>
+      <h3>JavaScript</h3>
+      <div class="progress-bar"><div class="progress-fill" data-width="65%"></div></div>
+      <span class="percentage">65%</span>
     </div>
     <div class="expertise-card">
-      <h3>Git & GitHub</h3>
-      <p>Version control, CI/CD, GitHub Actions</p>
+      <h3>Angular-JS</h3>
+      <div class="progress-bar"><div class="progress-fill" data-width="60%"></div></div>
+      <span class="percentage">60%</span>
     </div>
     <div class="expertise-card">
-      <h3>Deployment</h3>
-      <p>Netlify, Render, GitHub Pages</p>
+      <h3>PHP</h3>
+      <div class="progress-bar"><div class="progress-fill" data-width="60%"></div></div>
+      <span class="percentage">60%</span>
     </div>
+    <div class="expertise-card">
+      <h3>MySQL</h3>
+      <div class="progress-bar"><div class="progress-fill" data-width="80%"></div></div>
+      <span class="percentage">80%</span>
+    </div>
+    <div class="expertise-card">
+      <h3>Python</h3>
+      <div class="progress-bar"><div class="progress-fill" data-width="90%"></div></div>
+      <span class="percentage">90%</span>
+    </div>
+    <div class="expertise-card">
+      <h3>Pandas</h3>
+      <div class="progress-bar"><div class="progress-fill" data-width="80%"></div></div>
+      <span class="percentage">80%</span>
+    </div>
+    <div class="expertise-card">
+      <h3>NumPy</h3>
+      <div class="progress-bar"><div class="progress-fill" data-width="80%"></div></div>
+      <span class="percentage">80%</span>
+    </div>
+    <div class="expertise-card">
+      <h3>Scikit-learn</h3>
+      <div class="progress-bar"><div class="progress-fill" data-width="80%"></div></div>
+      <span class="percentage">80%</span>
+    </div>
+    <div class="expertise-card">
+      <h3>Prompt Engineering</h3>
+      <div class="progress-bar"><div class="progress-fill" data-width="80%"></div></div>
+      <span class="percentage">80%</span>
+    </div>
+    <div class="expertise-card">
+      <h3>MS Access</h3>
+      <div class="progress-bar"><div class="progress-fill" data-width="70%"></div></div>
+      <span class="percentage">70%</span>
+    </div>
+    <div class="expertise-card">
+      <h3>MS Word</h3>
+      <div class="progress-bar"><div class="progress-fill" data-width="92%"></div></div>
+      <span class="percentage">92%</span>
+    </div>
+    <div class="expertise-card">
+      <h3>MS Excel</h3>
+      <div class="progress-bar"><div class="progress-fill" data-width="80%"></div></div>
+      <span class="percentage">80%</span>
+    </div>
+    <div class="expertise-card">
+      <h3>Power BI</h3>
+      <div class="progress-bar"><div class="progress-fill" data-width="80%"></div></div>
+      <span class="percentage">80%</span>
+    </div>
+    <div class="expertise-card">
+      <h3>MS PPT</h3>
+      <div class="progress-bar"><div class="progress-fill" data-width="70%"></div></div>
+      <span class="percentage">70%</span>
+    </div>
+  </div>
+  <div class="projects-center-box">
+    <h3>My creative skills & experiences.</h3>
+    <p>What I know</p>
+    <a href="#projects" class="projects-btn">My Projects</a>
   </div>
 </section>
 
-<!-- Qualifications Section -->
-<section id="qualification">
-  <h2 class="section-title">Qualifications</h2>
+<!-- Qualification Section -->
+<section id="qualification" class="qualification section">
+  <h2 class="section-title">Qualification</h2>
+  <span class="section-subtitle">My personal journey</span>
+
   <div class="qualification-container">
-    <div class="qualification-box">
-      <h3>Class 10th</h3>
-      <p>The Alisons Educational School</p>
-      <p>Pragaipura, Banashankari, Bengaluru 560078</p>
-      <span>2018</span>
+    <!-- Tabs -->
+    <div class="qualification-tabs">
+      <div class="qualification-button button--flex qualification-active" data-target="#education">
+        🏫 Education
+      </div>
+      <div class="qualification-button button--flex" data-target="#work">
+        💼 Work
+      </div>
     </div>
-    <div class="qualification-box">
-      <h3>Diploma</h3>
-      <p>Sri Venkateshwara Polytechnic</p>
-      <p>Bannerghatta Anekal Road, Bengaluru 560083</p>
-      <span>2021</span>
-    </div>
-    <div class="qualification-box">
-      <h3>B.E in AI & ML</h3>
-      <p>City Engineering College</p>
-      <p>Doddakallasandra, Kanakapura Main Road, Bangalore 560062</p>
-      <span>2025</span>
+
+    <!-- Content -->
+    <div class="qualification-sections">
+      <!-- Education Content -->
+      <div class="qualification-content qualification-active" id="education">
+        <!-- Item 1 -->
+        <div class="qualification-data">
+          <div>
+            <h3 class="qualification-title">Class-10<sup>th</sup></h3>
+            <span class="qualification-subtitle">The Alisons Educational School, Bengaluru</span>
+            <div class="qualification-calendar">📅 2018</div>
+          </div>
+          <div>
+            <span class="qualification-rounder"></span>
+            <span class="qualification-line"></span>
+          </div>
+        </div>
+        <!-- Item 2 -->
+        <div class="qualification-data">
+          <div></div>
+          <div>
+            <span class="qualification-rounder"></span>
+            <span class="qualification-line"></span>
+          </div>
+          <div>
+            <h3 class="qualification-title">Diploma in CSE</h3>
+            <span class="qualification-subtitle">Sri Venkateshwara Polytechnic, Bengaluru</span>
+            <div class="qualification-calendar">📅 2021</div>
+          </div>
+        </div>
+        <!-- Item 3 -->
+        <div class="qualification-data">
+          <div>
+            <h3 class="qualification-title">B.E in AI & ML</h3>
+            <span class="qualification-subtitle">City Engineering College, Bengaluru</span>
+            <div class="qualification-calendar">📅 2025</div>
+          </div>
+          <div>
+            <span class="qualification-rounder"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Work Content -->
+      <div class="qualification-content" id="work">
+        <!-- Item 1 -->
+        <div class="qualification-data">
+          <div>
+            <h3 class="qualification-title">Data Analysis & Analytics</h3>
+            <span class="qualification-subtitle">City Engineering College</span>
+            <div class="qualification-calendar">📅 2022 – 2023</div>
+          </div>
+          <div>
+            <span class="qualification-rounder"></span>
+            <span class="qualification-line"></span>
+          </div>
+        </div>
+        <!-- Item 2 -->
+        <div class="qualification-data">
+          <div></div>
+          <div>
+            <span class="qualification-rounder"></span>
+            <span class="qualification-line"></span>
+          </div>
+          <div>
+            <h3 class="qualification-title">Machine Learning Engineer (as Intern)</h3>
+            <span class="qualification-subtitle">Ethical Byte</span>
+            <div class="qualification-calendar">📅 2023 – 2024</div>
+          </div>
+        </div>
+        <!-- Item 3 -->
+        <div class="qualification-data">
+          <div>
+            <h3 class="qualification-title">AI-DevOps Engineer Intern</h3>
+            <span class="qualification-subtitle">Rooman Technologies (IBM Collaboration)</span>
+            <div class="qualification-calendar">📅 2024 – 2024</div>
+          </div>
+          <div>
+            <span class="qualification-rounder"></span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+  <a href="#skills" class="section-nav-btn">My Skills</a>
 </section>
 
 <!-- Projects Section -->
 <section id="projects">
-  <h2 class="section-title">Projects</h2>
-  <div class="project-container">
-    <div class="project-box">
-      <h3>UPI Fraud Detection</h3>
-      <p>ML-based fraud detection system using Flask API, Random Forest, SVM, and Logistic Regression.</p>
-      <a href="https://github.com/Skismail57/UPI-Fraud-Detection" target="_blank">View Project</a>
+  <h2>My Projects</h2>
+  <p class="sub">— My creative works & experiences —</p>
+  
+  <div class="projects-intro">
+    <p>As a fresh technology student, I've had the opportunity to work on a variety of projects that have allowed me to apply theoretical knowledge in practical settings. Here are some highlights.</p>
+  </div>
+  
+  <div class="projects-container">
+    <div class="projects-header">
+      <div class="projects-tabs">
+        <div class="projects-tab active" data-filter="all">All Projects</div>
+        <div class="projects-tab" data-filter="ml">Machine Learning</div>
+        <div class="projects-tab" data-filter="data">Data Analysis</div>
+        <div class="projects-tab" data-filter="web">Web Development</div>
+        <div class="projects-tab" data-filter="arduino">Arduino Microcontroller</div>
+      </div>
     </div>
-    <div class="project-box">
-      <h3>Digital Voting System</h3>
-      <p>A secure online voting platform ensuring authentication and transparency.</p>
-      <a href="https://github.com/Skismail57/Digital-Voting-System" target="_blank">View Project</a>
-    </div>
-    <div class="project-box">
-      <h3>Fashion Branding</h3>
-      <p>A stylish and responsive branding website for showcasing fashion collections.</p>
-      <a href="https://github.com/Skismail57/Fashion-Branding" target="_blank">View Project</a>
-    </div>
-    <div class="project-box">
-      <h3>Hospital Management System</h3>
-      <p>A PHP & MySQL portal for managing hospital operations like patient records and appointments.</p>
-      <a href="https://github.com/Skismail57/Hospital-Management-System" target="_blank">View Project</a>
+    
+    <div class="project-container">
+      <!-- Line Follower Robot Project -->
+      <div class="project-box" data-category="arduino">
+        <div class="project-image">
+          <img src="_images/automated-line-follower-robot.jpg" alt="Line Follower Robot Project" />
+        </div>
+        <div class="project-content">
+          <h3>Line Follower Robot</h3>
+          <p>Autonomous robot that follows a line path using sensors and Arduino microcontroller programming.</p>
+          <div class="project-links">
+            <a href="#" class="project-link"><i class="fas fa-file-powerpoint"></i> PPT</a>
+            <a href="#" class="project-btn">View Project</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Data Analysis & Analytics Project -->
+      <div class="project-box" data-category="data">
+        <div class="project-image">
+          <img src="_images/data-analysis.jpg" alt="Data Analysis & Analytics Project" />
+        </div>
+        <div class="project-content">
+          <h3>Data Analysis & Analytics</h3>
+          <p>Comprehensive data analysis project using Python, Pandas, and visualization tools.</p>
+          <div class="project-links">
+            <a href="#" class="project-link"><i class="fas fa-file-powerpoint"></i> PPT</a>
+            <a href="https://github.com/Skismail57/Digital-Voting-System" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+            <a href="#" class="project-btn">View Project</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Machine Learning Project -->
+      <div class="project-box" data-category="ml">
+        <div class="project-image">
+          <img src="_images/iris-species.jpg" alt="Machine Learning Project" />
+        </div>
+        <div class="project-content">
+          <h3>Machine Learning</h3>
+          <p>Advanced ML models for predictive analytics and pattern recognition.</p>
+          <div class="project-links">
+            <a href="#" class="project-link"><i class="fas fa-file-powerpoint"></i> PPT</a>
+            <a href="#" class="project-btn">View Project</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Fashion Branding Project -->
+      <div class="project-box" data-category="web">
+        <div class="project-image">
+          <img src="_images/fashion-project.jpg" alt="Fashion Branding Project" />
+        </div>
+        <div class="project-content">
+          <h3>Fashion Branding</h3>
+          <p>Responsive branding website for fashion collections with modern design and user-friendly interface.</p>
+          <div class="project-links">
+            <a href="#" class="project-link"><i class="fas fa-file-powerpoint"></i> PPT</a>
+            <a href="https://github.com/Skismail57/Fashion-Branding" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+            <a href="#" class="project-btn">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hospital Management System Project -->
+      <div class="project-box" data-category="web">
+        <div class="project-image">
+          <img src="_images/hospital-project.jpg" alt="Hospital Management System Project" />
+        </div>
+        <div class="project-content">
+          <h3>Hospital Management System</h3>
+          <p>PHP & MySQL portal for hospital operations like patient records and appointments management.</p>
+          <div class="project-links">
+            <a href="#" class="project-link"><i class="fas fa-file-powerpoint"></i> PPT</a>
+            <a href="https://github.com/Skismail57/Hospital-Management-System" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+            <a href="#" class="project-btn">View Project</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- UPI Fraud Detection Project -->
+      <div class="project-box" data-category="ml">
+        <div class="project-image">
+          <img src="_images/upi-project.png" alt="UPI Fraud Detection Project" />
+        </div>
+        <div class="project-content">
+          <h3>UPI Fraud Detection</h3>
+          <p>ML-based fraud detection system using Flask API, Random Forest, SVM, and Logistic Regression algorithms.</p>
+          <div class="project-links">
+            <a href="#" class="project-link"><i class="fas fa-file-powerpoint"></i> PPT</a>
+            <a href="https://github.com/Skismail57/UPI-Fraud-Detection" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+            <a href="#" class="project-btn">View Project</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Python Voice Assistant Project -->
+      <div class="project-box" data-category="ml">
+        <div class="project-image">
+          <img src="_images/python.jpg" alt="Python Voice Assistant Project" />
+        </div>
+        <div class="project-content">
+          <h3>Python Voice Assistant</h3>
+          <p>AI-powered voice assistant built with Python that responds to voice commands.</p>
+          <div class="project-links">
+            <a href="#" class="project-link"><i class="fas fa-file-powerpoint"></i> PPT</a>
+            <a href="#" class="project-btn">View Project</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Research and Reporting on Bio Printing Project -->
+      <div class="project-box">
+        <div class="project-image">
+          <img src="_images/applications.jpg" alt="Research on Bio Printing Project" />
+        </div>
+        <div class="project-content">
+          <h3>Research on Bio Printing</h3>
+          <p>Comprehensive research and reporting on bio printing technology and its applications.</p>
+          <div class="project-links">
+            <a href="#" class="project-link"><i class="fas fa-file-powerpoint"></i> PPT</a>
+            <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+            <a href="#" class="project-btn">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Digital Voting System Project -->
+      <div class="project-box" data-category="web">
+        <div class="project-image">
+          <img src="_images/voting-project.webp" alt="Digital Voting System Project" />
+        </div>
+        <div class="project-content">
+          <h3>Digital Voting System</h3>
+          <p>Created a responsive Digital Voting System using HTML, CSS, JavaScript, MySQL and PHP, focusing on a clean design and user-friendly navigation.</p>
+          <div class="project-links">
+            <a href="#" class="project-link"><i class="fas fa-file-powerpoint"></i> PPT</a>
+            <a href="https://github.com/Skismail57/Digital-Voting-System" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+            <a href="#" class="project-btn">View Project</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- Gallery Section -->
 <section id="gallery">
-  <h2 class="section-title">Certificates</h2>
-  <div class="gallery-container">
-    <img src="_images/AI-DevOps Engineer Internship Certificate .jpg" alt="Internship Certificate">
-    <img src="_images/AI- DevOps Engineer Training Certificate .jpg" alt="Training Certificate">
-    <img src="_images/AIML internship Ethical Byte .jpg" alt="Ethical Byte Internship">
-    <img src="_images/Certificate 1.jpg" alt="Certificate 1">
-    <img src="_images/Certificate 2.jpg" alt="Certificate 2">
-    <img src="_images/Certificate 3.jpg" alt="Certificate 3">
-    <img src="_images/Certificate 4.jpg" alt="Certificate 4">
-    <img src="_images/Certificate 5.jpg" alt="Certificate 5">
-    <img src="_images/Certificate 6.jpg" alt="Certificate 6">
-    <img src="_images/Certificate 7.jpg" alt="Certificate 7">
-    <img src="_images/Certificate 8.jpg" alt="Certificate 8">
-    <img src="_images/IBM Certificate.jpg" alt="IBM Certificate">
-    <img src="_images/Marksheet of AI-DevOps Engineer Certificate .jpg" alt="Marksheet Certificate">
-    <img src="_images/On-Job Training Certificate .jpg" alt="On-Job Training Certificate">
+  <div class="gallery-header">
+    <h2>My Gallery</h2>
+    <p class="gallery-subtitle">— Certificates —</p>
   </div>
+  
+  <div class="gallery-container">
+    <button class="gallery-nav gallery-prev" id="galleryPrev">‹</button>
+    
+    <div class="gallery-wrapper">
+      <div class="gallery-track" id="galleryTrack">
+        <div class="gallery-item slide-in-left">
+          <img src="_images/AI-DevOps-Engineer-Internship-Certificate.jpg" alt="AI-DevOps Engineer Internship Certificate">
+          <div class="gallery-overlay">
+            <h3>AI-DevOps Engineer Certification</h3>
+          </div>
+        </div>
+        
+        <div class="gallery-item slide-in-right">
+          <img src="_images/AI- DevOps-Engineer-Training-Certificate.jpg" alt="AI-DevOps Engineer Training Certificate">
+          <div class="gallery-overlay">
+            <h3>AI-DevOps Engineer Training</h3>
+          </div>
+        </div>
+        
+        <div class="gallery-item slide-in-left">
+          <img src="_images/AIML-internship-Ethical-Byte.jpg" alt="AIML Internship Ethical Byte">
+          <div class="gallery-overlay">
+            <h3>Artificial Intelligence & Machine Learning</h3>
+          </div>
+        </div>
+        
+        <div class="gallery-item slide-in-right">
+          <img src="_images/Certificate 1.jpg" alt="Certificate 1">
+          <div class="gallery-overlay">
+            <h3>Frontend Development - HTML</h3>
+          </div>
+        </div>
+        
+        <div class="gallery-item slide-in-left">
+          <img src="_images/Certificate 2.jpg" alt="Certificate 2">
+          <div class="gallery-overlay">
+            <h3>Machine Learning Certification</h3>
+          </div>
+        </div>
+        
+        <div class="gallery-item slide-in-right">
+          <img src="_images/Certificate 3.jpg" alt="Certificate 3">
+          <div class="gallery-overlay">
+            <h3>Introduction to Artificial Intelligence</h3>
+          </div>
+        </div>
+        
+        <div class="gallery-item slide-in-left">
+          <img src="_images/IBM-Certificate.jpg" alt="IBM Certificate">
+          <div class="gallery-overlay">
+            <h3>Cloud-Native Application Development with IBM Cloud and Kubernetes</h3>
+          </div>
+        </div>
+        
+        <div class="gallery-item slide-in-right">
+          <img src="_images/On-Job-Training-Certificate.jpg" alt="On-Job Training Certificate">
+          <div class="gallery-overlay">
+            <h3>On-Job Training Program</h3>
+          </div>
+        </div>
+        
+        <div class="gallery-item slide-in-left">
+          <img src="_images/Certificate 4.jpg" alt="Certificate 4">
+          <div class="gallery-overlay">
+            <h3>Programming Certification</h3>
+          </div>
+        </div>
+        
+        <div class="gallery-item slide-in-right">
+          <img src="_images/Certificate 5.jpg" alt="Certificate 5">
+          <div class="gallery-overlay">
+            <h3>Data Science Certification</h3>
+          </div>
+        </div>
+        
+        <div class="gallery-item slide-in-left">
+          <img src="_images/Certificate 6.jpg" alt="Certificate 6">
+          <div class="gallery-overlay">
+            <h3>Web Development Certification</h3>
+          </div>
+        </div>
+        
+        <div class="gallery-item slide-in-right">
+          <img src="_images/Certificate 7.jpg" alt="Certificate 7">
+          <div class="gallery-overlay">
+            <h3>Database Management Certification</h3>
+          </div>
+        </div>
+        
+        <div class="gallery-item slide-in-left">
+          <img src="_images/Certificate 8.jpg" alt="Certificate 8">
+          <div class="gallery-overlay">
+            <h3>Cloud Computing Certification</h3>
+          </div>
+        </div>
+        
+        <div class="gallery-item slide-in-right">
+          <img src="_images/Marksheet-of-AI-DevOps-Engineer-Certificate.jpg" alt="AI-DevOps Engineer Marksheet">
+          <div class="gallery-overlay">
+            <h3>AI-DevOps Engineer Marksheet</h3>
+          </div>
+        </div>
+
+        <div class="gallery-item slide-in-left">
+          <img src="_images/Advance Java Programming.jpg" alt="Advance Java Programming">
+          <div class="gallery-overlay">
+            <h3>Advance Java Programming</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <button class="gallery-nav gallery-next" id="galleryNext">›</button>
+  </div>
+  
+  <div class="gallery-dots" id="galleryDots"></div>
 </section>
 
 <!-- Contact Section -->
-<section id="contact">
-  <h2 class="section-title">Contact</h2>
-  <form id="contact-form" method="POST" action="/send">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
-    <button type="submit">Send Message</button>
-    <p id="form-response"></p>
-  </form>
+<section id="contact" class="contact-section">
+  <div class="contact-container">
+    <!-- Left Side with Profile Image -->
+    <div class="contact-left">
+      <div class="contact-info">
+        <h2 style="text-align: center;">Let's get in touch</h2>
+        <div class="profile-circle">
+          <div class="profile-image">
+            <img src="_images/your-photo.jpg" alt="S K Ismail Profile" />
+          </div>
+        </div>
+        <p>Let's be connected to find solutions in dynamic environment to solve real-time problem by working together.</p>
+        <div class="contact-details">
+          <p><i class="fas fa-map-marker-alt"></i> Bengaluru-560070</p>
+          <p><i class="fas fa-envelope"></i> shaikhmismail66@gmail.com</p>
+          <p><i class="fas fa-phone-alt"></i> +91 8904851665</p>
+        </div>
+        <p class="connect-text">Connect with us :</p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/s-k-ismail-b5ba942b7" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/Skismail57" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="mailto:shaikhmismail66@gmail.com"><i class="fas fa-envelope"></i></a>
+          <a href="https://wa.me/918904851665" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        
+        <!-- Resume Section -->
+        <div class="resume-section">
+          <p class="resume-text">Download my resume :</p>
+          <div class="resume-buttons">
+            <a href="resume/S_K_Ismail_Resume.pdf" download="S_K_Ismail_Resume.pdf" class="resume-btn download-btn">
+              <i class="fas fa-download"></i> Download Resume
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Right Side Contact Form -->
+    <div class="contact-right">
+      <div class="contact-form-container">
+        <h2 style="text-align: center;">Contact us</h2>
+        <form class="contact-form" id="contactForm">
+          <div class="input-group">
+            <input type="text" id="username" name="username" required />
+            <label for="username">Username</label>
+          </div>
+          <div class="input-group">
+            <input type="email" id="email" name="email" required />
+            <label for="email">Email</label>
+          </div>
+          <div class="input-group">
+            <input type="tel" id="phone" name="phone" required />
+            <label for="phone">Phone</label>
+          </div>
+          <div class="input-group">
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <label for="message">Message</label>
+          </div>
+          <button type="submit" class="send-btn">Send Message</button>
+        </form>
+        <div id="formMessage" class="form-message"></div>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <p>Created By <span class="highlight">S K Ismail</span> | © 2025 S K Ismail, All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Scripts -->
 <script src="script.js"></script>
+<script src="simple-gallery.js"></script>
+<script src="skills.js"></script>
+<script src="projects.js"></script>
+<script src="script.js"></script>
+<script src="animations.js"></script>
+<script src="progress-indicator.js"></script>
+<script src="about-typing.js"></script>
+<script src="home-arrow.js"></script>
+  <script src="home-arrow.js"></script>
+  <script src="contact-handler.js"></script>
+<script src="project-tracking.js"></script>
 </body>
 </html>
