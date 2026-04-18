@@ -516,13 +516,14 @@ section .gallery-heading-btn::after {
   margin-bottom: 60px;
   font-size: 2.5rem;
   color: #0a66c2;
+  font-weight: 700;
 }
 
 .expertise-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -531,53 +532,40 @@ section .gallery-heading-btn::after {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 40px;
   flex-wrap: wrap;
 }
 
-.expertise-row.row-offset {
-  padding-left: 0;
-}
-
 .expertise-icon {
-  font-size: 50px;
-  transition: all 0.3s ease;
+  width: 60px;
+  height: 60px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80px;
-  height: 80px;
-  border-radius: 15px;
-  background: transparent;
+  background: #ffffff;
+  padding: 5px;
+}
+
+.expertise-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .expertise-icon:hover {
-  transform: scale(1.2) translateY(-10px);
-  filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.1));
-}
-
-.expertise-icon i {
-  display: block;
-}
-
-/* Adjust for different icon types if needed */
-.expertise-icon i.colored {
-  filter: grayscale(20%);
-}
-
-.expertise-icon:hover i.colored {
-  filter: grayscale(0%);
+  transform: scale(1.25) translateY(-10px);
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
 }
 
 @media (max-width: 768px) {
   .expertise-row {
-    gap: 15px;
+    gap: 20px;
   }
   .expertise-icon {
-    font-size: 40px;
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
   }
 }
 
