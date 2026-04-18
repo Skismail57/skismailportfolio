@@ -10,12 +10,16 @@
 }
 
 body {
-  background-color: #f8f9fa;
-  color: #333;
+  background: #ffffff;
+  color: #222;
   line-height: 1.6;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Arial, sans-serif;
   overflow-x: hidden;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+section {
+  background: #f8f9fa;
+  padding: 60px 20px;
 }
 
 /* ===== NAVBAR ===== */
@@ -353,9 +357,9 @@ section .gallery-heading-btn::after {
   font-weight: 400;
 }
 
-/* Override for black sections */
+/* Remove override for black sections since they are now light */
 #projects .sub, #skills .sub, #gallery .sub {
-  color: #cccccc;
+  color: #666;
 }
 
 /* ===== ABOUT SECTION ===== */
@@ -410,7 +414,7 @@ section .gallery-heading-btn::after {
 
 /* ===== SKILLS ===== */
 #skills {
-  background: #0a0a0a;
+  background: #f8f9fa;
   padding: 80px 5%;
 }
 
@@ -423,13 +427,13 @@ section .gallery-heading-btn::after {
 }
 
 .skill-card {
-  background: #1a1a1a;
+  background: #ffffff;
   padding: 30px;
   border-radius: 15px;
   text-align: center;
   transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  border: 1px solid #333;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
   position: relative;
   overflow: hidden;
 }
@@ -501,99 +505,39 @@ section .gallery-heading-btn::after {
 }
 
 /* ===== EXPERTISE ===== */
-#experties {
-  padding: 80px 5%;
-  background: white;
+#expertise h2 {
   text-align: center;
+  margin-bottom: 40px;
 }
 
-#experties h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #0a66c2;
-  margin-bottom: 8px;
+.expertise-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
 
-#experties .sub {
-  color: #666;
-  margin-bottom: 24px;
-  font-size: 1.1rem;
+.expertise-box {
+  background: white;
+  padding: 30px;
+  width: 180px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: .3s;
 }
 
-.experties-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 24px;
-  margin-bottom: 36px;
-  margin-top: 20px;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+.expertise-box:hover {
+  transform: translateY(-10px);
 }
 
-.expertise-card {
-  background: #f8f9fa;
-  padding: 24px;
-  border-radius: 12px;
-  text-align: left;
-  transition: all 0.3s ease;
-  position: relative;
-  border: 1px solid #eef2f7;
-  box-shadow: 0 4px 12px rgba(16, 24, 40, 0.06);
-}
-
-.expertise-card:hover {
-  transform: translateY(-4px);
-  animation: glow 2s ease-in-out infinite;
-  border-color: #0a66c2;
-}
-
-.expertise-card h3 {
-  font-size: 1.2rem;
-  color: #333;
+.expertise-box i {
+  font-size: 60px;
   margin-bottom: 15px;
-  font-weight: 600;
 }
 
-.progress-bar {
-  width: 100%;
-  height: 10px;
-  background: #edf1f5;
-  border-radius: 6px;
-  overflow: hidden;
-  margin-bottom: 10px;
-  position: relative;
-}
-
-.progress-fill {
-  height: 100%;
-  background: linear-gradient(90deg, #0a66c2, #4dabf7);
-  border-radius: 6px;
-  width: 0%;
-  transition: width 2s ease-in-out;
-  position: relative;
-}
-
-.progress-fill::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  animation: shimmer 2s infinite;
-}
-
-@keyframes shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
-}
-
-.percentage {
-  font-weight: 600;
-  color: #0a66c2;
-  font-size: 0.9rem;
+.expertise-box h3 {
+  margin: 0;
 }
 
 .projects-center-box {
@@ -759,7 +703,7 @@ section .gallery-heading-btn::after {
 /* ===== PROJECTS ===== */
 #projects {
   padding: 80px 5%;
-  background: #0a0a0a;
+  background: #ffffff;
   position: relative;
 }
 
@@ -773,13 +717,13 @@ section .gallery-heading-btn::after {
 .projects-intro p {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #cccccc;
+  color: #555;
   font-style: italic;
   padding: 20px;
-  background: rgba(26, 26, 26, 0.5);
+  background: #f8f9fa;
   border-radius: 15px;
-  border: 1px solid #333;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border: 1px solid #eee;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 /* Projects Container */
@@ -805,13 +749,13 @@ section .gallery-heading-btn::after {
 
 .projects-tab {
   padding: 10px 20px;
-  background: #1a1a1a;
+  background: #f0f0f0;
   border-radius: 30px;
   cursor: pointer;
   font-weight: 500;
   transition: all 0.3s ease;
-  border: 1px solid #333;
-  color: #cccccc;
+  border: 1px solid #ddd;
+  color: #555;
 }
 
 .projects-tab:hover, .projects-tab.active {
@@ -831,12 +775,12 @@ section .gallery-heading-btn::after {
 }
 
 .project-box {
-  background: #1a1a1a;
+  background: #ffffff;
   padding: 0;
   border-radius: 20px;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-  border: 1px solid #333;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -921,7 +865,7 @@ section .gallery-heading-btn::after {
 }
 
 .project-box p {
-  color: #cccccc;
+  color: #666;
   line-height: 1.6;
   margin-bottom: 20px;
   flex: 1;
@@ -993,7 +937,7 @@ section .gallery-heading-btn::after {
 /* ===== GALLERY ===== */
 #gallery {
   padding: 80px 5%;
-  background: #0a0a0a;
+  background: #f8f9fa;
   position: relative;
   overflow: hidden;
 }
@@ -1006,13 +950,13 @@ section .gallery-heading-btn::after {
 .gallery-header h2 {
   font-size: 2.8rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #0a66c2;
   margin-bottom: 10px;
   letter-spacing: 1px;
 }
 
 .gallery-subtitle {
-  color: #888888;
+  color: #666;
   font-size: 1.1rem;
   font-weight: 300;
   margin: 0;
@@ -1046,10 +990,10 @@ section .gallery-heading-btn::after {
   position: relative;
   border-radius: 8px;
   overflow: hidden;
-  background: #2a2a2a;
+  background: #ffffff;
   height: 280px;
-  border: 3px solid #404040;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  border: 3px solid #eee;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
   cursor: pointer;
   transition: all 0.4s ease;
   opacity: 1;
