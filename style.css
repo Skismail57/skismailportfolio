@@ -505,39 +505,80 @@ section .gallery-heading-btn::after {
 }
 
 /* ===== EXPERTISE ===== */
+#expertise {
+  padding: 100px 5%;
+  background: #ffffff;
+  overflow: hidden;
+}
+
 #expertise h2 {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
+  font-size: 2.5rem;
+  color: #0a66c2;
 }
 
 .expertise-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.expertise-row {
+  display: flex;
   justify-content: center;
+  align-items: center;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
-.expertise-box {
-  background: white;
-  padding: 30px;
-  width: 180px;
-  text-align: center;
-  border-radius: 20px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-  transition: .3s;
+.expertise-row.row-offset {
+  padding-left: 0;
 }
 
-.expertise-box:hover {
-  transform: translateY(-10px);
+.expertise-icon {
+  font-size: 50px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+  background: transparent;
 }
 
-.expertise-box i {
-  font-size: 60px;
-  margin-bottom: 15px;
+.expertise-icon:hover {
+  transform: scale(1.2) translateY(-10px);
+  filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.1));
 }
 
-.expertise-box h3 {
-  margin: 0;
+.expertise-icon i {
+  display: block;
+}
+
+/* Adjust for different icon types if needed */
+.expertise-icon i.colored {
+  filter: grayscale(20%);
+}
+
+.expertise-icon:hover i.colored {
+  filter: grayscale(0%);
+}
+
+@media (max-width: 768px) {
+  .expertise-row {
+    gap: 15px;
+  }
+  .expertise-icon {
+    font-size: 40px;
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .projects-center-box {
