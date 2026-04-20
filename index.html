@@ -17,6 +17,9 @@
 
   <!-- Devicon for realistic tech icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -114,45 +117,47 @@
 
 <!-- Expertise Section -->
 <section id="expertise">
-  <h2>Expertise</h2>
-  <div class="expertise-container">
-    <!-- Row 1 -->
-    <div class="expertise-row">
-      <div class="expertise-icon" title="HTML5"><img src="light/html.svg" alt="HTML5"></div>
-      <div class="expertise-icon" title="CSS3"><img src="light/css.svg" alt="CSS3"></div>
-      <div class="expertise-icon" title="JavaScript"><img src="light/js.svg" alt="JavaScript"></div>
-      <div class="expertise-icon" title="Tailwind CSS"><img src="light/tailwind.svg" alt="Tailwind"></div>
-      <div class="expertise-icon" title="React"><img src="light/react.svg" alt="React"></div>
-      <div class="expertise-icon" title="Redux"><img src="light/redux.svg" alt="Redux"></div>
-      <div class="expertise-icon" title="TypeScript"><img src="light/typescript.svg" alt="TypeScript"></div>
-      <div class="expertise-icon" title="Next.js"><img src="light/nextjs.svg" alt="Next.js"></div>
-      <div class="expertise-icon" title="Node.js"><img src="light/nodejs.svg" alt="Node.js"></div>
-      <div class="expertise-icon" title="MongoDB"><img src="light/mongodb.svg" alt="MongoDB"></div>
-    </div>
-    <!-- Row 2 -->
-    <div class="expertise-row">
-      <div class="expertise-icon" title="Python"><img src="light/python.svg" alt="Python"></div>
-      <div class="expertise-icon" title="Django"><img src="light/django.svg" alt="Django"></div>
-      <div class="expertise-icon" title="Flask"><img src="light/flask.svg" alt="Flask"></div>
-      <div class="expertise-icon" title="MySQL"><img src="light/mysql.svg" alt="MySQL"></div>
-      <div class="expertise-icon" title="PostgreSQL"><img src="light/postgresql.svg" alt="PostgreSQL"></div>
-      <div class="expertise-icon" title="Firebase"><img src="light/firebase.svg" alt="Firebase"></div>
-      <div class="expertise-icon" title="Docker"><img src="light/docker.svg" alt="Docker"></div>
-      <div class="expertise-icon" title="Git"><img src="light/git.svg" alt="Git"></div>
-      <div class="expertise-icon" title="GitHub"><img src="light/github.svg" alt="GitHub"></div>
-    </div>
-    <!-- Row 3 -->
-    <div class="expertise-row">
-      <div class="expertise-icon" title="VS Code"><img src="light/vscode.svg" alt="VS Code"></div>
-      <div class="expertise-icon" title="Postman"><img src="light/postman.svg" alt="Postman"></div>
-      <div class="expertise-icon" title="Figma"><img src="light/figma.svg" alt="Figma"></div>
-      <div class="expertise-icon" title="Canva"><img src="light/canva.svg" alt="Canva"></div>
-      <div class="expertise-icon" title="ChatGPT"><img src="light/chatgpt.svg" alt="ChatGPT"></div>
-      <div class="expertise-icon" title="Claude"><img src="light/claude.svg" alt="Claude"></div>
-      <div class="expertise-icon" title="Gemini"><img src="light/gemini.svg" alt="Gemini"></div>
-      <div class="expertise-icon" title="Google Colab"><img src="light/google-colab.svg" alt="Google Colab"></div>
+
+  <h2 class="expertise-title" data-aos="fade-up">
+    Expertise
+  </h2>
+
+  <!-- ROW 1 -->
+  <div class="expertise-row">
+    <i class="devicon-html5-plain colored" data-aos="zoom-in" data-aos-delay="100"></i>
+    <i class="devicon-css3-plain colored" data-aos="zoom-in" data-aos-delay="200"></i>
+    <i class="devicon-javascript-plain colored" data-aos="zoom-in" data-aos-delay="300"></i>
+    <i class="devicon-react-original colored" data-aos="zoom-in" data-aos-delay="400"></i>
+    <i class="devicon-redux-original colored" data-aos="zoom-in" data-aos-delay="500"></i>
+  </div>
+
+  <!-- ROW 2 -->
+  <div class="expertise-row">
+    <i class="devicon-angularjs-plain colored" data-aos="zoom-in" data-aos-delay="600"></i>
+    <i class="devicon-php-plain colored" data-aos="zoom-in" data-aos-delay="700"></i>
+    <i class="devicon-mysql-plain colored" data-aos="zoom-in" data-aos-delay="800"></i>
+    <i class="devicon-python-plain colored" data-aos="zoom-in" data-aos-delay="900"></i>
+    <i class="devicon-pandas-original colored" data-aos="zoom-in" data-aos-delay="1000"></i>
+  </div>
+
+  <!-- ROW 3 -->
+  <div class="expertise-row">
+    <i class="devicon-numpy-original colored" data-aos="zoom-in" data-aos-delay="1100"></i>
+    <i class="devicon-scikitlearn-plain colored" data-aos="zoom-in" data-aos-delay="1200"></i>
+    <img src="_images/skills/word.png" alt="Word" data-aos="zoom-in" data-aos-delay="1300">
+    <img src="_images/skills/excel.png" alt="Excel" data-aos="zoom-in" data-aos-delay="1400">
+    <img src="_images/skills/powerbi.png" alt="Power BI" data-aos="zoom-in" data-aos-delay="1500">
+  </div>
+
+  <!-- ROW 4 -->
+  <div class="expertise-row">
+    <img src="_images/skills/access.png" alt="Access" data-aos="zoom-in" data-aos-delay="1600">
+    <img src="_images/skills/ppt.png" alt="PPT" data-aos="zoom-in" data-aos-delay="1700">
+    <div class="custom-skill" data-aos="zoom-in" data-aos-delay="1800">
+      🤖
     </div>
   </div>
+
 </section>
 
 <!-- Qualification Section -->
@@ -622,6 +627,14 @@
 </footer>
 
 <!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    duration: 1200,
+    once: false
+  });
+</script>
 <script src="script.js"></script>
 <script src="simple-gallery.js"></script>
 <script src="skills.js"></script>
