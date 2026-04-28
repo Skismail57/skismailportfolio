@@ -542,25 +542,34 @@ section .gallery-heading-btn::after {
 .skill-row { 
     display: flex; 
     justify-content: center; 
-    gap: 35px; 
+    gap: 30px; 
     flex-wrap: wrap;
 } 
 
-/* Icons */ 
-.skill-icon { 
-    width: 55px; 
-    height: 55px; 
-    object-fit: contain; 
+/* Icon Box Container (Secret to alignment) */
+.icon-box {
+    width: 58px;          /* container size */ 
+    height: 58px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
 
     opacity: 0; 
     transform: translateY(40px) scale(0.9); 
     transition: all 0.6s ease; 
+    will-change: transform;
+}
 
-    will-change: transform; 
+/* Icons inside Box */ 
+.icon-box img { 
+    width: 36px;          /* actual icon size inside */ 
+    height: 36px; 
+    object-fit: contain; 
+    transition: all 0.4s ease;
 } 
 
-/* Show animation */ 
-.skill-icon.show { 
+/* Show animation applied to Box */ 
+.icon-box.show { 
     opacity: 1; 
     transform: translateY(0) scale(1); 
     animation: float 3s ease-in-out infinite; 
@@ -580,34 +589,38 @@ section .gallery-heading-btn::after {
     100% { transform: translateY(0px) translateX(0px); } 
 } 
 
-/* Apply variation */ 
-.skill-row img:nth-child(even) { 
+/* Apply variation to Box */ 
+.skill-row .icon-box:nth-child(even) { 
     animation: float2 4s ease-in-out infinite; 
 } 
 
-/* Stagger delay */ 
-.skill-row img:nth-child(1) { transition-delay: 0.1s; animation-delay: 0s; } 
-.skill-row img:nth-child(2) { transition-delay: 0.2s; animation-delay: 0.5s; } 
-.skill-row img:nth-child(3) { transition-delay: 0.3s; animation-delay: 1s; } 
-.skill-row img:nth-child(4) { transition-delay: 0.4s; animation-delay: 1.5s; } 
-.skill-row img:nth-child(5) { transition-delay: 0.5s; animation-delay: 2s; } 
-.skill-row img:nth-child(6) { transition-delay: 0.6s; animation-delay: 2.5s; } 
-.skill-row img:nth-child(7) { transition-delay: 0.7s; animation-delay: 3s; } 
-.skill-row img:nth-child(8) { transition-delay: 0.8s; animation-delay: 3.5s; } 
+/* Stagger delay on Box */ 
+.skill-row .icon-box:nth-child(1) { transition-delay: 0.1s; animation-delay: 0s; } 
+.skill-row .icon-box:nth-child(2) { transition-delay: 0.2s; animation-delay: 0.5s; } 
+.skill-row .icon-box:nth-child(3) { transition-delay: 0.3s; animation-delay: 1s; } 
+.skill-row .icon-box:nth-child(4) { transition-delay: 0.4s; animation-delay: 1.5s; } 
+.skill-row .icon-box:nth-child(5) { transition-delay: 0.5s; animation-delay: 2s; } 
+.skill-row .icon-box:nth-child(6) { transition-delay: 0.6s; animation-delay: 2.5s; } 
+.skill-row .icon-box:nth-child(7) { transition-delay: 0.7s; animation-delay: 3s; } 
+.skill-row .icon-box:nth-child(8) { transition-delay: 0.8s; animation-delay: 3.5s; } 
 
-/* Hover effect */ 
-.skill-icon:hover { 
-    transform: scale(1.15) !important; 
+/* Hover effect on the image/box */ 
+.icon-box:hover img { 
+    transform: scale(1.15); 
     filter: drop-shadow(0 0 10px #00f7ff); 
 } 
 
 @media (max-width: 768px) {
   .skill-row {
-    gap: 20px;
+    gap: 15px;
   }
-  .skill-icon {
-    width: 45px;
-    height: 45px;
+  .icon-box {
+    width: 48px;
+    height: 48px;
+  }
+  .icon-box img {
+    width: 28px;
+    height: 28px;
   }
 }
 
