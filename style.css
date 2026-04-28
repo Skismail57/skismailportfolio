@@ -563,8 +563,8 @@ section .gallery-heading-btn::after {
 
 /* Icons inside Box */ 
 .icon-box img { 
-    width: 34px;          /* Small size icons as requested */ 
-    height: 34px; 
+    width: 38px;          /* Back to 38px as per step 1 */ 
+    height: 38px; 
     object-fit: contain; 
     transition: all 0.4s ease;
     animation: float 3s ease-in-out infinite; /* Added float from optional step */
