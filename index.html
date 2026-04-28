@@ -109,69 +109,56 @@
 </section>
 
 <!-- Expertise Section -->
-<section id="expertise">
+<section id="expertise"> 
+    <h2 class="section-title">Expertise</h2> 
 
-  <h2 class="expertise-title" data-aos="fade-up">
-    Expertise
-  </h2>
+    <div class="skills-container"> 
 
-  <!-- ROW 1 -->
-  <div class="expertise-row" data-aos="zoom-in">
-    <i class="devicon-html5-plain colored"></i>
-    <i class="devicon-css3-plain colored"></i>
-    <i class="devicon-javascript-plain colored"></i>
-    <i class="devicon-tailwindcss-plain colored"></i>
-    <i class="devicon-react-original colored"></i>
-    <i class="devicon-redux-original colored"></i>
-    <i class="devicon-graphql-plain colored"></i>
-    <i class="devicon-typescript-plain colored"></i>
-    <i class="devicon-nextjs-plain-wordmark colored"></i>
-    <i class="devicon-materialui-plain colored"></i>
-    <i class="devicon-sass-original colored"></i>
-    <i class="devicon-nodejs-plain colored"></i>
-    <i class="devicon-mongodb-plain-wordmark colored"></i>
-  </div>
+        <!-- Row 1 --> 
+        <div class="skill-row"> 
+            <img src="light/html.svg" class="skill-icon"> 
+            <img src="light/css.svg" class="skill-icon"> 
+            <img src="light/js.svg" class="skill-icon"> 
+            <img src="light/tailwind.svg" class="skill-icon"> 
+            <img src="light/react.svg" class="skill-icon"> 
+            <img src="light/redux.svg" class="skill-icon"> 
+            <img src="light/typescript.svg" class="skill-icon"> 
+            <img src="light/nextjs.svg" class="skill-icon"> 
+        </div> 
 
-  <!-- ROW 2 -->
-  <div class="expertise-row" data-aos="zoom-in" data-aos-delay="200">
-    <i class="devicon-html5-plain-wordmark colored"></i>
-    <i class="devicon-css3-plain-wordmark colored"></i>
-    <i class="devicon-javascript-plain colored"></i>
-    <i class="devicon-tailwindcss-original-wordmark colored"></i>
-    <i class="devicon-materialui-original colored"></i>
-    <i class="devicon-react-original-wordmark colored"></i>
-    <i class="devicon-redux-original colored"></i>
-    <i class="devicon-graphql-plain-wordmark colored"></i>
-    <i class="devicon-typescript-plain colored"></i>
-    <i class="devicon-nextjs-original colored"></i>
-  </div>
+        <!-- Row 2 --> 
+        <div class="skill-row"> 
+            <img src="light/html.svg" class="skill-icon"> 
+            <img src="light/css.svg" class="skill-icon"> 
+            <img src="light/js.svg" class="skill-icon"> 
+            <img src="light/tailwind.svg" class="skill-icon"> 
+            <img src="light/react.svg" class="skill-icon"> 
+            <img src="light/redux.svg" class="skill-icon"> 
+            <img src="light/typescript.svg" class="skill-icon"> 
+            <img src="light/nextjs.svg" class="skill-icon"> 
+        </div> 
 
-  <!-- ROW 3 -->
-  <div class="expertise-row" data-aos="zoom-in" data-aos-delay="400">
-    <i class="devicon-nodejs-plain-wordmark colored"></i>
-    <i class="devicon-express-original-wordmark colored"></i>
-    <i class="devicon-mongodb-plain colored"></i>
-    <i class="devicon-firebase-plain-wordmark colored"></i>
-    <i class="devicon-postgresql-plain-wordmark colored"></i>
-    <i class="devicon-mysql-plain-wordmark colored"></i>
-    <i class="devicon-docker-plain-wordmark colored"></i>
-    <i class="devicon-figma-plain colored"></i>
-  </div>
+        <!-- Row 3 --> 
+        <div class="skill-row"> 
+            <img src="light/nodejs.svg" class="skill-icon"> 
+            <img src="light/express.svg" class="skill-icon"> 
+            <img src="light/mongodb.svg" class="skill-icon"> 
+            <img src="light/firebase.svg" class="skill-icon"> 
+            <img src="light/postgresql.svg" class="skill-icon"> 
+            <img src="light/mysql.svg" class="skill-icon"> 
+            <img src="light/graphql.svg" class="skill-icon"> 
+        </div> 
 
-  <!-- ROW 4 -->
-  <div class="expertise-row" data-aos="zoom-in" data-aos-delay="600">
-    <i class="devicon-react-original colored"></i>
-    <i class="devicon-github-original colored"></i>
-    <i class="devicon-docker-plain colored"></i>
-    <i class="devicon-figma-plain colored"></i>
-  </div>
+        <!-- Row 4 --> 
+        <div class="skill-row"> 
+            <img src="light/react.svg" class="skill-icon"> 
+            <img src="light/docker.svg" class="skill-icon"> 
+            <img src="light/figma.svg" class="skill-icon"> 
+        </div> 
 
-  <!-- ROW 5 -->
-  <div class="expertise-row" data-aos="zoom-in" data-aos-delay="800">
-    <i class="devicon-go-plain colored"></i>
-  </div>
+    </div> 
+</section> 
 
-</section>
 
 <!-- Qualification Section -->
 <section id="qualification" class="qualification section">
@@ -660,5 +647,21 @@
   <script src="home-arrow.js"></script>
   <script src="contact-handler.js"></script>
 <script src="project-tracking.js"></script>
+<script> 
+const icons = document.querySelectorAll('.skill-icon'); 
+const section = document.querySelector('#expertise'); 
+ 
+const observer = new IntersectionObserver(entries => { 
+    entries.forEach(entry => { 
+        if (entry.isIntersecting) { 
+            icons.forEach(icon => { 
+                icon.classList.add('show'); 
+            }); 
+        } 
+    }); 
+}, { threshold: 0.3 }); 
+ 
+observer.observe(section); 
+</script> 
 </body>
 </html>
