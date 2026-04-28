@@ -365,7 +365,7 @@ section .gallery-heading-btn::after {
 /* ===== ABOUT SECTION ===== */
 #about {
   padding: 80px 5%;
-  background: white;
+  background: #f8f9fa;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -508,6 +508,7 @@ section .gallery-heading-btn::after {
 #expertise {
   padding: 100px 40px;
   text-align: center;
+  background: #ffffff;
 }
 
 .expertise-title {
@@ -521,10 +522,13 @@ section .gallery-heading-btn::after {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 25px;
   margin-bottom: 30px;
   flex-wrap: wrap;
   width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* SMALL ICON SIZE like SpacePortfolio */
@@ -742,7 +746,7 @@ section .gallery-heading-btn::after {
 /* ===== PROJECTS ===== */
 #projects {
   padding: 80px 5%;
-  background: #ffffff;
+  background: #f8f9fa;
   position: relative;
 }
 
