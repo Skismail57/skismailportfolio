@@ -544,12 +544,13 @@ section .gallery-heading-btn::after {
     justify-content: center; 
     gap: 30px; 
     flex-wrap: wrap;
+    max-width: 900px; /* Secret from Step 4 */
 } 
 
 /* Icon Box Container (Secret to alignment) */
 .icon-box {
-    width: 58px;          /* container size */ 
-    height: 58px; 
+    width: 55px;          /* Exact match from Step 2/5 */ 
+    height: 55px; 
     display: flex; 
     align-items: center; 
     justify-content: center; 
@@ -562,47 +563,47 @@ section .gallery-heading-btn::after {
 
 /* Icons inside Box */ 
 .icon-box img { 
-    width: 36px;          /* actual icon size inside */ 
-    height: 36px; 
+    width: 38px;          /* Exact match from Step 1/5 */ 
+    height: 38px; 
     object-fit: contain; 
     transition: all 0.4s ease;
+    animation: float 3s ease-in-out infinite; /* Added float from optional step */
 } 
 
 /* Show animation applied to Box */ 
 .icon-box.show { 
     opacity: 1; 
     transform: translateY(0) scale(1); 
-    animation: float 3s ease-in-out infinite; 
 } 
 
 /* Floating animation */ 
 @keyframes float { 
     0% { transform: translateY(0px); } 
-    50% { transform: translateY(-10px); } 
+    50% { transform: translateY(-8px); } /* Match from optional step */
     100% { transform: translateY(0px); } 
 } 
 
 /* Alternate floating */ 
 @keyframes float2 { 
     0% { transform: translateY(0px) translateX(0px); } 
-    50% { transform: translateY(-10px) translateX(5px); } 
+    50% { transform: translateY(-8px) translateX(5px); } 
     100% { transform: translateY(0px) translateX(0px); } 
 } 
 
 /* Apply variation to Box */ 
-.skill-row .icon-box:nth-child(even) { 
+.skill-row .icon-box:nth-child(even) img { 
     animation: float2 4s ease-in-out infinite; 
 } 
 
 /* Stagger delay on Box */ 
-.skill-row .icon-box:nth-child(1) { transition-delay: 0.1s; animation-delay: 0s; } 
-.skill-row .icon-box:nth-child(2) { transition-delay: 0.2s; animation-delay: 0.5s; } 
-.skill-row .icon-box:nth-child(3) { transition-delay: 0.3s; animation-delay: 1s; } 
-.skill-row .icon-box:nth-child(4) { transition-delay: 0.4s; animation-delay: 1.5s; } 
-.skill-row .icon-box:nth-child(5) { transition-delay: 0.5s; animation-delay: 2s; } 
-.skill-row .icon-box:nth-child(6) { transition-delay: 0.6s; animation-delay: 2.5s; } 
-.skill-row .icon-box:nth-child(7) { transition-delay: 0.7s; animation-delay: 3s; } 
-.skill-row .icon-box:nth-child(8) { transition-delay: 0.8s; animation-delay: 3.5s; } 
+.skill-row .icon-box:nth-child(1) { transition-delay: 0.1s; } 
+.skill-row .icon-box:nth-child(2) { transition-delay: 0.2s; } 
+.skill-row .icon-box:nth-child(3) { transition-delay: 0.3s; } 
+.skill-row .icon-box:nth-child(4) { transition-delay: 0.4s; } 
+.skill-row .icon-box:nth-child(5) { transition-delay: 0.5s; } 
+.skill-row .icon-box:nth-child(6) { transition-delay: 0.6s; } 
+.skill-row .icon-box:nth-child(7) { transition-delay: 0.7s; } 
+.skill-row .icon-box:nth-child(8) { transition-delay: 0.8s; } 
 
 /* Hover effect on the image/box */ 
 .icon-box:hover img { 
