@@ -409,19 +409,29 @@ nav ul li a.active {
 }
 
 .about-btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   padding: 15px 35px;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(167, 139, 250, 0.2);
   color: white;
-  text-decoration: none;
+  border: 2px solid rgba(167, 139, 250, 0.5);
   border-radius: 8px;
   font-weight: 600;
   font-size: 1.1rem;
+  cursor: pointer;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  text-decoration: none;
   min-width: 140px;
   text-align: center;
+}
+
+.about-btn:hover {
+  background: rgba(167, 139, 250, 0.4);
+  border-color: rgba(167, 139, 250, 0.8);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(167, 139, 250, 0.3);
 }
 
 .ai-video-btn {
