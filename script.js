@@ -1,10 +1,37 @@
+// ===== Theme Toggle =====
+const themeToggle = document.getElementById('theme-toggle');
+const savedTheme = localStorage.getItem('theme');
+
+if (savedTheme) {
+  document.body.classList.toggle('dark-mode', savedTheme === 'dark');
+  updateThemeIcon(savedTheme);
+}
+
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  const isDark = document.body.classList.contains('dark-mode');
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  updateThemeIcon(isDark ? 'dark' : 'light');
+});
+
+function updateThemeIcon(theme) {
+  const icon = themeToggle.querySelector('i');
+  if (theme === 'dark') {
+    icon.classList.remove('fa-moon');
+    icon.classList.add('fa-sun');
+  } else {
+    icon.classList.remove('fa-sun');
+    icon.classList.add('fa-moon');
+  }
+}
+
 // ===== Mobile Menu Toggle =====
 function toggleMenu() {
   const navLinks = document.getElementById('nav-links');
   navLinks.classList.toggle('show');
 }
 
-// ===== Navbar Scroll Color Change =====
+// ===== Navbar Scroll Color Change & Active Section Highlight =====
 window.addEventListener("scroll", function () {
   const nav = document.querySelector("nav");
   if (window.scrollY > 50) {
@@ -12,6 +39,26 @@ window.addEventListener("scroll", function () {
   } else {
     nav.classList.remove("scrolled");
   }
+
+  // Active Section Highlighting
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('nav ul li a');
+
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 200;
+    const sectionHeight = section.clientHeight;
+    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) {
+      link.classList.add('active');
+    }
+  });
 });
 
 // ===== Typing Effect for Hero Role =====
@@ -49,6 +96,42 @@ document.addEventListener('DOMContentLoaded', function() {
     typeEffect();
   }
 });
+
+// ===== Animated Counter for Achievements =====
+function animateCounter(el) {
+  const target = parseInt(el.getAttribute('data-target'));
+  let current = 0;
+  const duration = 2000; // 2 seconds
+  const increment = target / (duration / 16); // 60fps
+
+  const timer = setInterval(() => {
+    current += increment;
+    if (current >= target) {
+      el.textContent = target;
+      clearInterval(timer);
+    } else {
+      el.textContent = Math.floor(current);
+    }
+  }, 16);
+}
+
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const counters = entry.target.querySelectorAll('.counter');
+      counters.forEach(counter => {
+        if (counter.textContent === '0') { // Only animate once
+          animateCounter(counter);
+        }
+      });
+    }
+  });
+}, { threshold: 0.5 });
+
+const achievementsSection = document.getElementById('achievements');
+if (achievementsSection) {
+  counterObserver.observe(achievementsSection);
+}
 
 // ===== Scroll Animation (Fade & Slide) =====
 const animatedElements = document.querySelectorAll("section, .skill-card, .project-box, .expertise-card, .gallery-item");
@@ -98,7 +181,7 @@ progressBars.forEach(bar => progressObserver.observe(bar));
 
 // ===== Counter Animation for Percentages =====
 const percentageElements = document.querySelectorAll('.percentage');
-const counterObserver = new IntersectionObserver(entries => {
+const percentageCounterObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       const percentage = entry.target;
@@ -119,7 +202,7 @@ const counterObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.5 });
 
 percentageElements.forEach(element => {
-  counterObserver.observe(element);
+  percentageCounterObserver.observe(element);
 });
 
 /* Qualification Tabs Toggle */
@@ -261,10 +344,68 @@ if (contactForm) {
   });
 }
 
-// ===== Add Loading Animation =====
+// ===== Hide Loading Screen =====
 window.addEventListener('load', function() {
+  const loadingScreen = document.getElementById('loading-screen');
+  if (loadingScreen) {
+    // Wait a little longer for smoother transition
+    setTimeout(() => {
+      loadingScreen.classList.add('hidden');
+    }, 1000);
+  }
   document.body.classList.add('loaded');
 });
+
+// ===== Back To Top Button =====
+const backToTopBtn = document.getElementById('backToTop');
+
+if (backToTopBtn) {
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add('visible');
+    } else {
+      backToTopBtn.classList.remove('visible');
+    }
+  });
+
+  backToTopBtn.addEventListener('click', function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
+
+// ===== Scroll Progress Bar =====
+const scrollProgressBar = document.getElementById('scroll-progress-bar');
+
+if (scrollProgressBar) {
+  window.addEventListener('scroll', function() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    scrollProgressBar.style.width = scrollPercent + '%';
+  });
+}
+
+// ===== PROJECT SEARCH =====
+const projectSearch = document.getElementById('projectSearch');
+const projectBoxes = document.querySelectorAll('.project-box');
+
+if (projectSearch) {
+  projectSearch.addEventListener('input', function(e) {
+    const searchTerm = e.target.value.toLowerCase();
+    projectBoxes.forEach(box => {
+      const projectTitle = box.querySelector('h3').textContent.toLowerCase();
+      const projectDescription = box.querySelector('p') ? box.querySelector('p').textContent.toLowerCase() : '';
+      if (projectTitle.includes(searchTerm) || projectDescription.includes(searchTerm)) {
+        box.style.display = 'flex';
+      } else {
+        box.style.display = 'none';
+      }
+    });
+  });
+}
 
 // ===== Parallax disabled to ensure background image visibility =====
 // window.addEventListener('scroll', function() {

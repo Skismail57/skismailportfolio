@@ -1,4 +1,111 @@
 /* ===== GALLERY SECTION STYLING ===== */
+.gallery-section {
+  padding: 80px 20px;
+  background: var(--bg-primary);
+}
+
+.gallery-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.gallery-section .sub {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.gallery-controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.gallery-btn {
+  background: var(--accent-primary);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.gallery-btn:hover {
+  background: var(--accent-secondary);
+  transform: scale(1.1);
+}
+
+/* Gallery overlay */
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-overlay h3 {
+  color: white;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.gallery-overlay p {
+  color: #ccc;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Gallery dots */
+.gallery-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.gallery-dot {
+  width: 12px;
+  height: 12px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.gallery-dot:hover {
+  background: var(--accent-primary);
+  transform: scale(1.2);
+}
+
+.gallery-dot.active {
+  background: var(--accent-primary);
+  transform: scale(1.2);
+}
+
+/* Make gallery item position relative for overlay */
+.gallery-item {
+  position: relative;
+}
 
 /* Gallery heading wrapper */
 .gallery-heading-wrapper {
@@ -45,9 +152,9 @@
 /* Gallery item */
 .gallery-item {
   min-width: 280px;
-  background: white;
+  background: var(--bg-secondary);
   border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--card-shadow);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   flex-shrink: 0;
@@ -55,7 +162,7 @@
 
 .gallery-item:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
 }
 
 .gallery-item img {

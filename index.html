@@ -3,7 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>S K Ismail | Portfolio</title>
+  
+  <!-- SEO Meta Tags -->
+  <title>S K Ismail | AIML Engineer | Python Developer | Full Stack Developer</title>
+  <meta name="description" content="Portfolio of S K Ismail, AIML Engineer, Machine Learning Engineer, Python Developer, and Full Stack Developer specializing in web development, AI, and ML solutions.">
+  <meta name="keywords" content="S K Ismail, AIML Engineer, Machine Learning Engineer, Python Developer, Full Stack Developer, Portfolio">
+  <meta name="author" content="S K Ismail">
+  
+  <!-- Open Graph / Social Media Tags -->
+  <meta property="og:title" content="S K Ismail | AIML Engineer & Full Stack Developer">
+  <meta property="og:description" content="Portfolio of S K Ismail, AIML Engineer, Machine Learning Engineer, and Python Developer.">
+  <meta property="og:type" content="website">
 
   <!-- Google Font (Poppins for Gagan style) -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -23,21 +33,40 @@
 </head>
 <body>
 
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <div class="loading-content">
+    <h1 class="loading-name">S K Ismail</h1>
+    <div class="loading-spinner"></div>
+    <p class="loading-text">Loading Portfolio...</p>
+  </div>
+</div>
+
 <!-- Navigation -->
 <nav>
   <div class="logo">Welcome<span>.</span></div>
-  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  <div class="nav-controls">
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+      <i class="fas fa-moon"></i>
+    </button>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </div>
   <ul id="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#qualification">Qualification</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#experties">Expertise</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#gallery">Gallery</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#qualification">Qualification</a></li>
+        <li><a href="#services">Skills</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 </nav>
+
+<!-- Scroll Progress Bar -->
+<div id="scroll-progress" class="scroll-progress">
+  <div id="scroll-progress-bar" class="scroll-progress-bar"></div>
+</div>
 
 <!-- Home Section -->
 <section id="home" class="hero">
@@ -49,7 +78,13 @@
       <p>Hello, I am</p>
       <h1>S K Ismail</h1>
       <h3>And I am a <span class="animated-role">Full Stack Web Developer!</span></h3>
-      <a href="#about" class="about-btn">About Me</a>
+      <div class="hero-buttons">
+        <a href="#about" class="about-btn">About Me</a>
+        <button id="aiVideoBtn" class="ai-video-btn">
+          <i class="fas fa-play-circle"></i>
+          Watch AI Ismail
+        </button>
+      </div>
     </div>
   </div>
 </section>
@@ -74,36 +109,56 @@
     <div class="about-text">
       <h3>I'm S K Ismail and I am a <span class="animated-role">Machine Learning Engineer</span></h3>
       <p>
-        I'm passionate and driven in the field of Artificial Intelligence and Machine Learning (AIML) from City Engineering College, Bengaluru. I've built hands-on experience through internships and academic projects involving Python, SQL, Flask, Docker, and DevOps pipelines. I'm skilled in tools and libraries such as Pandas, NumPy, TensorFlow, Scikit-learn, and GitHub, with a strong interest in solving real-world problems using AI and automation.
+        I am a passionate Artificial Intelligence and Machine Learning (AIML) graduate from City Engineering College, Bengaluru. I have gained hands-on experience through internships and projects involving Python, SQL, Flask, Docker, and DevOps practices. My technical skills include Pandas, NumPy, TensorFlow, Scikit-learn, Git, and GitHub, with a strong interest in building intelligent solutions and solving real-world problems through AI and automation.
       </p>
       <p>
-        Along with my B.E., I also hold a Diploma in Computer Science (2018–2020) from Sri Venkateshwara Polytechnic, which gave me a strong programming and database foundation. I'm actively seeking full-time job opportunities in software development, AI/ML, or DevOps, where I can apply my skills and grow in a collaborative team environment.
+        &nbsp;I also hold a Diploma in Computer Science from Sri Venkateshwara Polytechnic, which provided me with a strong foundation in programming, databases, and software development. I am seeking opportunities in Software Development, AI/ML, and related technology domains where I can contribute, learn, and grow professionally.
       </p>
-      <p>you can know more about my Qualification, Skills, Experties, Works, Presentations, Achivements etc....</p>
+      <p>&nbsp;Explore my portfolio to learn more about my qualifications, technical skills, projects, presentations, certifications, and achievements.</p>
       <a href="#qualification" class="section-nav-btn">My Qualification</a>
     </div>
   </div>
 </section>
 
+
+
+
+
 <!-- Skills Section -->
-<section id="skills">
-  <h2 class="skills-heading-btn">My Skills</h2>
-  <p class="sub">— what I do  —</p>
-  <div class="skills-grid">
-    <div class="skill-card">
-      <i class="fas fa-paint-brush"></i>
-      <h3>AI Development</h3>
-      <p>Python, Pandas, NumPy, Excel, Kaggle, Hugging Face, scikit-learn, Google Colab, Blackbox AI, ChatGPT</p>
+<section id="services">
+  <h2>My Skills</h2>
+  <p class="sub">— What I Can Do For You —</p>
+  
+  <div class="services-grid">
+    <div class="service-card">
+      <i class="fas fa-robot"></i>
+      <h3>Machine Learning Solutions</h3>
+      <p>End-to-end ML solutions including data preprocessing, model training, evaluation, and deployment using Python, TensorFlow, and Scikit-learn.</p>
     </div>
-    <div class="skill-card">
-      <i class="fas fa-chart-line"></i>
-      <h3>Data Science</h3>
-      <p>Python, Pandas, NumPy, Excel, WEKA, Tableau, GPT Excel, Blackbox AI, ChatGPT, Gemini</p>
-    </div>
-    <div class="skill-card">
-      <i class="fas fa-code"></i>
+    <div class="service-card">
+      <i class="fas fa-globe"></i>
       <h3>Web Development</h3>
-      <p>HTML, CSS, JavaScript, PHP, MySQL, Python, AngularJS, MS Access, Blackbox AI</p>
+      <p>Modern, responsive web applications using HTML, CSS, JavaScript, React, Django, and PHP, with seamless user experiences.</p>
+    </div>
+    <div class="service-card">
+      <i class="fas fa-server"></i>
+      <h3>Backend Development</h3>
+      <p>Scalable backend APIs and services using Node.js, Flask, and Django, with database integration (MySQL, PostgreSQL, MongoDB).</p>
+    </div>
+    <div class="service-card">
+      <i class="fas fa-database"></i>
+      <h3>Database Design</h3>
+      <p>Optimal database design, normalization, optimization, and management for efficient data storage and retrieval.</p>
+    </div>
+    <div class="service-card">
+      <i class="fas fa-brain"></i>
+      <h3>AI Applications</h3>
+      <p>AI-powered solutions including chatbots, recommendation systems, image recognition, and natural language processing.</p>
+    </div>
+    <div class="service-card">
+      <i class="fas fa-chart-bar"></i>
+      <h3>Data Analysis</h3>
+      <p>Comprehensive data analysis, visualization, and reporting using Pandas, NumPy, Excel, Tableau, and matplotlib.</p>
     </div>
   </div>
 </section>
@@ -112,41 +167,75 @@
 <section id="expertise"> 
     <h2 class="section-title">Expertise</h2> 
 
-    <div class="skills-container"> 
-
-        <!-- Frontend Skills Row --> 
-        <div class="skill-row"> 
-            <div class="icon-box"><img src="public/icons/html5-original.svg" alt="Html 5"></div> 
-            <div class="icon-box"><img src="public/icons/javascript-original.svg" alt="Java Script"></div> 
-            <div class="icon-box"><img src="public/icons/react-original.svg" alt="React"></div> 
-            <div class="icon-box"><img src="public/icons/angularjs-original.svg" alt="AngularJS"></div> 
-            <div class="icon-box"><img src="public/icons/nextjs-original.svg" alt="Next js 13"></div> 
-            <div class="icon-box"><img src="public/icons/nodejs-original.svg" alt="Node js"></div> 
-            <div class="icon-box"><img src="public/icons/php-original.svg" alt="PHP"></div> 
-            <div class="icon-box"><img src="public/icons/python-original.svg" alt="Python"></div> 
-            <div class="icon-box"><img src="public/icons/java-original.svg" alt="Java"></div> 
+    <div class="expertise-grid"> 
+        <div class="icon-box" data-skill="HTML 5">
+            <img src="public/icons/html5-original.svg" alt="Html 5">
+            <span class="skill-name">HTML 5</span>
         </div> 
-
-        <!-- Backend Skills Row --> 
-        <div class="skill-row"> 
-            <div class="icon-box"><img src="public/icons/postgresql-original.svg" alt="Postger SQL"></div> 
-            <div class="icon-box"><img src="public/icons/mysql-original.svg" alt="My SQL"></div> 
-            <div class="icon-box"><img src="public/icons/database-file.png" alt="Mongo db"></div> 
+        <div class="icon-box" data-skill="JavaScript">
+            <img src="public/icons/javascript-original.svg" alt="Java Script">
+            <span class="skill-name">JavaScript</span>
         </div> 
-
-        <!-- DevTools Row --> 
-        <div class="skill-row"> 
-            <div class="icon-box"><img src="public/icons/github-original.svg" alt="GitHub"></div> 
-            <div class="icon-box"><img src="public/icons/netlify-original.svg" alt="Netlify"></div> 
-            <div class="icon-box"><img src="public/icons/visualstudio-original.svg" alt="VS Code"></div> 
-            <div class="icon-box"><img src="public/icons/chatgpt.png" alt="ChatGPT"></div> 
+        <div class="icon-box" data-skill="React">
+            <img src="public/icons/react-original.svg" alt="React">
+            <span class="skill-name">React</span>
         </div> 
-
-        <!-- Libraries Row --> 
-        <div class="skill-row"> 
-            <div class="icon-box"><img src="public/icons/brain.png" alt="AI/ML"></div> 
+        <div class="icon-box" data-skill="AngularJS">
+            <img src="public/icons/angularjs-original.svg" alt="AngularJS">
+            <span class="skill-name">AngularJS</span>
         </div> 
-
+        <div class="icon-box" data-skill="Next.js">
+            <img src="public/icons/nextjs-original.svg" alt="Next js 13">
+            <span class="skill-name">Next.js</span>
+        </div> 
+        <div class="icon-box" data-skill="Node.js">
+            <img src="public/icons/nodejs-original.svg" alt="Node js">
+            <span class="skill-name">Node.js</span>
+        </div> 
+        <div class="icon-box" data-skill="PHP">
+            <img src="public/icons/php-original.svg" alt="PHP">
+            <span class="skill-name">PHP</span>
+        </div> 
+        <div class="icon-box" data-skill="Python">
+            <img src="public/icons/python-original.svg" alt="Python">
+            <span class="skill-name">Python</span>
+        </div> 
+        <div class="icon-box" data-skill="Java">
+            <img src="public/icons/java-original.svg" alt="Java">
+            <span class="skill-name">Java</span>
+        </div> 
+        <div class="icon-box" data-skill="PostgreSQL">
+            <img src="public/icons/postgresql-original.svg" alt="Postger SQL">
+            <span class="skill-name">PostgreSQL</span>
+        </div> 
+        <div class="icon-box" data-skill="MySQL">
+            <img src="public/icons/mysql-original.svg" alt="My SQL">
+            <span class="skill-name">MySQL</span>
+        </div> 
+        <div class="icon-box" data-skill="MongoDB">
+            <img src="public/icons/database-file.png" alt="Mongo db">
+            <span class="skill-name">MongoDB</span>
+        </div> 
+        <div class="icon-box" data-skill="GitHub">
+            <img src="public/icons/github-original.svg" alt="GitHub">
+            <span class="skill-name">GitHub</span>
+        </div> 
+        <div class="icon-box" data-skill="Netlify">
+            <img src="public/icons/netlify-original.svg" alt="Netlify">
+            <span class="skill-name">Netlify</span>
+        </div> 
+        <div class="icon-box" data-skill="VS Code">
+            <img src="public/icons/visualstudio-original.svg" alt="VS Code">
+            <span class="skill-name">VS Code</span>
+        </div> 
+        <div class="icon-box" data-skill="ChatGPT">
+            <img src="public/icons/chatgpt.png" alt="ChatGPT">
+            <span class="skill-name">ChatGPT</span>
+        </div> 
+        <div class="icon-box" data-skill="AI/ML">
+            <img src="public/icons/brain.png" alt="AI/ML">
+            <span class="skill-name">AI/ML</span>
+        </div> 
     </div> 
 </section> 
 
@@ -214,9 +303,9 @@
         <!-- Item 1 -->
         <div class="qualification-data">
           <div>
-            <h3 class="qualification-title">Data Analysis & Analytics</h3>
-            <span class="qualification-subtitle">City Engineering College</span>
-            <div class="qualification-calendar">📅 2022 – 2023</div>
+            <h3 class="qualification-title">Sales Executive</h3>
+            <span class="qualification-subtitle">BPO Convergence Pvt. Ltd.</span>
+            <div class="qualification-calendar">📅 2022 – 2022</div>
           </div>
           <div>
             <span class="qualification-rounder"></span>
@@ -231,12 +320,25 @@
             <span class="qualification-line"></span>
           </div>
           <div>
+            <h3 class="qualification-title">Data Analysis & Analytics</h3>
+            <span class="qualification-subtitle">City Engineering College</span>
+            <div class="qualification-calendar">📅 2022 – 2023</div>
+          </div>
+        </div>
+        <!-- Item 3 -->
+        <div class="qualification-data">
+          <div></div>
+          <div>
+            <span class="qualification-rounder"></span>
+            <span class="qualification-line"></span>
+          </div>
+          <div>
             <h3 class="qualification-title">Machine Learning Engineer (as Intern)</h3>
             <span class="qualification-subtitle">Ethical Byte</span>
             <div class="qualification-calendar">📅 2023 – 2024</div>
           </div>
         </div>
-        <!-- Item 3 -->
+        <!-- Item 4 -->
         <div class="qualification-data">
           <div>
             <h3 class="qualification-title">AI-DevOps Engineer Intern</h3>
@@ -250,7 +352,6 @@
       </div>
     </div>
   </div>
-  <a href="#skills" class="section-nav-btn">My Skills</a>
 </section>
 
 <!-- Projects Section -->
@@ -271,146 +372,83 @@
         <div class="projects-tab" data-filter="web">Web Development</div>
         <div class="projects-tab" data-filter="arduino">Arduino Microcontroller</div>
       </div>
+      <div class="projects-search">
+        <input type="text" id="projectSearch" placeholder="Search projects..." />
+      </div>
     </div>
     
     <div class="project-container">
-      <!-- Line Follower Robot Project -->
-      <div class="project-box" data-category="arduino">
-        <div class="project-image">
-          <img src="_images/automated-line-follower-robot.jpg" alt="Line Follower Robot Project" />
-        </div>
-        <div class="project-content">
-          <h3>Line Follower Robot</h3>
-          <p>Autonomous robot that follows a line path using sensors and Arduino microcontroller programming.</p>
-          <div class="project-links">
-            <a href="#" class="project-link"><i class="fas fa-file-powerpoint"></i> PPT</a>
-            <a href="#" class="project-btn">View Project</a>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Data Analysis & Analytics Project -->
-      <div class="project-box" data-category="data">
-        <div class="project-image">
-          <img src="_images/data-analysis.jpg" alt="Data Analysis & Analytics Project" />
-        </div>
-        <div class="project-content">
-          <h3>Data Analysis & Analytics</h3>
-          <p>Comprehensive data analysis project using Python, Pandas, and visualization tools.</p>
-          <div class="project-links">
-            <a href="#" class="project-link"><i class="fas fa-file-powerpoint"></i> PPT</a>
-            <a href="https://github.com/Skismail57/Digital-Voting-System" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-            <a href="#" class="project-btn">View Project</a>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Machine Learning Project -->
+      <!-- UPI Fraud Detection Using Machine Learning -->
       <div class="project-box" data-category="ml">
         <div class="project-image">
-          <img src="_images/iris-species.jpg" alt="Machine Learning Project" />
+          <img src="_images/upi-project.jpg" alt="UPI Fraud Detection Using Machine Learning" />
         </div>
         <div class="project-content">
-          <h3>Machine Learning</h3>
-          <p>Advanced ML models for predictive analytics and pattern recognition.</p>
+          <h3>UPI Fraud Detection Using Machine Learning</h3>
+          <p>ML-based system using Flask API, Random Forest, SVM, and Logistic Regression algorithms to identify fraudulent transactions in real-time.</p>
           <div class="project-links">
-            <a href="#" class="project-link"><i class="fas fa-file-powerpoint"></i> PPT</a>
-            <a href="#" class="project-btn">View Project</a>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Fashion Branding Project -->
-      <div class="project-box" data-category="web">
-        <div class="project-image">
-          <img src="_images/fashion-project.jpg" alt="Fashion Branding Project" />
-        </div>
-        <div class="project-content">
-          <h3>Fashion Branding</h3>
-          <p>Responsive branding website for fashion collections with modern design and user-friendly interface.</p>
-          <div class="project-links">
-            <a href="#" class="project-link"><i class="fas fa-file-powerpoint"></i> PPT</a>
-            <a href="https://github.com/Skismail57/Fashion-Branding" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-            <a href="#" class="project-btn">View Project</a>
+            <a href="https://github.com/Skismail57/UPI_Fraud_Detection_Using_Machine_Learning" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://github.com/Skismail57/UPI_Fraud_Detection_Using_Machine_Learning" target="_blank" class="project-btn">View Project</a>
           </div>
         </div>
       </div>
 
-      <!-- Hospital Management System Project -->
+      <!-- AI-Powered Student Management System -->
       <div class="project-box" data-category="web">
         <div class="project-image">
-          <img src="_images/hospital-project.jpg" alt="Hospital Management System Project" />
+          <img src="_images/AI-Powered-Student-Management-System.jpg" alt="AI-Powered Student Management System" />
         </div>
         <div class="project-content">
-          <h3>Hospital Management System</h3>
-          <p>PHP & MySQL portal for hospital operations like patient records and appointments management.</p>
+          <h3>AI-Powered Student Management System</h3>
+          <p>Comprehensive student management system with AI features for attendance tracking, performance analytics, and automated report generation.</p>
           <div class="project-links">
-            <a href="#" class="project-link"><i class="fas fa-file-powerpoint"></i> PPT</a>
-            <a href="https://github.com/Skismail57/Hospital-Management-System" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-            <a href="#" class="project-btn">View Project</a>
-          </div>
-        </div>
-      </div>
-      
-      <!-- UPI Fraud Detection Project -->
-      <div class="project-box" data-category="ml">
-        <div class="project-image">
-          <img src="_images/upi-project.png" alt="UPI Fraud Detection Project" />
-        </div>
-        <div class="project-content">
-          <h3>UPI Fraud Detection</h3>
-          <p>ML-based fraud detection system using Flask API, Random Forest, SVM, and Logistic Regression algorithms.</p>
-          <div class="project-links">
-            <a href="#" class="project-link"><i class="fas fa-file-powerpoint"></i> PPT</a>
-            <a href="https://github.com/Skismail57/UPI-Fraud-Detection" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-            <a href="#" class="project-btn">View Project</a>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Python Voice Assistant Project -->
-      <div class="project-box" data-category="ml">
-        <div class="project-image">
-          <img src="_images/python.jpg" alt="Python Voice Assistant Project" />
-        </div>
-        <div class="project-content">
-          <h3>Python Voice Assistant</h3>
-          <p>AI-powered voice assistant built with Python that responds to voice commands.</p>
-          <div class="project-links">
-            <a href="#" class="project-link"><i class="fas fa-file-powerpoint"></i> PPT</a>
-            <a href="#" class="project-btn">View Project</a>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Research and Reporting on Bio Printing Project -->
-      <div class="project-box">
-        <div class="project-image">
-          <img src="_images/applications.jpg" alt="Research on Bio Printing Project" />
-        </div>
-        <div class="project-content">
-          <h3>Research on Bio Printing</h3>
-          <p>Comprehensive research and reporting on bio printing technology and its applications.</p>
-          <div class="project-links">
-            <a href="#" class="project-link"><i class="fas fa-file-powerpoint"></i> PPT</a>
-            <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-            <a href="#" class="project-btn">View Project</a>
+            <a href="https://github.com/Skismail57/AI-Powered-Student-Management-System" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://github.com/Skismail57/AI-Powered-Student-Management-System" target="_blank" class="project-btn">View Project</a>
           </div>
         </div>
       </div>
 
-      <!-- Digital Voting System Project -->
+      <!-- Health Stack System -->
       <div class="project-box" data-category="web">
         <div class="project-image">
-          <img src="_images/voting-project.webp" alt="Digital Voting System Project" />
+          <img src="_images/hospital-project.jpg" alt="Health Stack System" />
         </div>
         <div class="project-content">
-          <h3>Digital Voting System</h3>
-          <p>Created a responsive Digital Voting System using HTML, CSS, JavaScript, MySQL and PHP, focusing on a clean design and user-friendly navigation.</p>
+          <h3>Health Stack System</h3>
+          <p>Modern healthcare management system for patient records, appointment scheduling, and medical inventory tracking with secure data handling.</p>
           <div class="project-links">
-            <a href="#" class="project-link"><i class="fas fa-file-powerpoint"></i> PPT</a>
-            <a href="https://github.com/Skismail57/Digital-Voting-System" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-            <a href="#" class="project-btn">View Project</a>
+            <a href="https://github.com/Skismail57/Health-Stack-System" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://github.com/Skismail57/Health-Stack-System" target="_blank" class="project-btn">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- BLOCKELECT - Blockchain Voting System -->
+      <div class="project-box" data-category="web">
+        <div class="project-image">
+          <img src="_images/voting-project.jpg" alt="BLOCKELECT Blockchain Voting System" />
+        </div>
+        <div class="project-content">
+          <h3>BLOCKELECT - Blockchain Voting System</h3>
+          <p>Secure and transparent voting system built on blockchain technology to ensure tamper-proof elections and verifiable results.</p>
+          <div class="project-links">
+            <a href="https://github.com/Skismail57/BLOCKELECT-BlockchainVoting-System" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://github.com/Skismail57/BLOCKELECT-BlockchainVoting-System" target="_blank" class="project-btn">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Django To-Do List with User Authentication -->
+      <div class="project-box" data-category="web">
+        <div class="project-image">
+          <img src="_images/Django-To-Do-List_with_User_Authentication.jpg" alt="Django To-Do List with User Authentication" />
+        </div>
+        <div class="project-content">
+          <h3>Django To-Do List with User Authentication</h3>
+          <p>Full-featured task management application built with Django, featuring user authentication, task CRUD operations, and personalized dashboards.</p>
+          <div class="project-links">
+            <a href="https://github.com/Skismail57/Django-To-Do-List_with_User_Authentication" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://github.com/Skismail57/Django-To-Do-List_with_User_Authentication" target="_blank" class="project-btn">View Project</a>
           </div>
         </div>
       </div>
@@ -419,128 +457,141 @@
 </section>
 
 <!-- Gallery Section -->
-<section id="gallery">
-  <div class="gallery-header">
-    <h2>My Gallery</h2>
-    <p class="gallery-subtitle">— Certificates —</p>
+<section id="gallery" class="gallery-section">
+  <h2>My Gallery</h2>
+  <p class="sub">— Certifications & Achievements —</p>
+  
+  <div class="gallery-controls">
+    <button id="galleryPrev" class="gallery-btn"><i class="fas fa-chevron-left"></i></button>
+    <button id="galleryNext" class="gallery-btn"><i class="fas fa-chevron-right"></i></button>
   </div>
   
-  <div class="gallery-container">
-    <button class="gallery-nav gallery-prev" id="galleryPrev">‹</button>
-    
-    <div class="gallery-wrapper">
-      <div class="gallery-track" id="galleryTrack">
-        <div class="gallery-item slide-in-left">
-          <img src="_images/AI-DevOps-Engineer-Internship-Certificate.jpg" alt="AI-DevOps Engineer Internship Certificate">
-          <div class="gallery-overlay">
-            <h3>AI-DevOps Engineer Certification</h3>
-          </div>
+  <div id="scrollGallery" class="scroll-gallery">
+    <div id="galleryTrack" class="gallery-track">
+      <!-- Gallery Items -->
+      <div class="gallery-item">
+        <img src="_images/AI-DevOps-Engineer-Internship-Certificate.jpg" alt="AI-DevOps Internship Certificate">
+        <div class="gallery-overlay">
+          <h3>AI-DevOps Internship</h3>
+          <p>Rooman Technologies</p>
         </div>
-        
-        <div class="gallery-item slide-in-right">
-          <img src="_images/AI- DevOps-Engineer-Training-Certificate.jpg" alt="AI-DevOps Engineer Training Certificate">
-          <div class="gallery-overlay">
-            <h3>AI-DevOps Engineer Training</h3>
-          </div>
+      </div>
+      <div class="gallery-item">
+        <img src="_images/AI- DevOps-Engineer-Training-Certificate.jpg" alt="AI-DevOps Training Certificate">
+        <div class="gallery-overlay">
+          <h3>AI-DevOps Training</h3>
+          <p>IBM Collaboration</p>
         </div>
-        
-        <div class="gallery-item slide-in-left">
-          <img src="_images/AIML-internship-Ethical-Byte.jpg" alt="AIML Internship Ethical Byte">
-          <div class="gallery-overlay">
-            <h3>Artificial Intelligence & Machine Learning</h3>
-          </div>
+      </div>
+      <div class="gallery-item">
+        <img src="_images/AIML-internship-Ethical-Byte.jpg" alt="AIML Internship">
+        <div class="gallery-overlay">
+          <h3>AIML Internship</h3>
+          <p>Ethical Byte</p>
         </div>
-        
-        <div class="gallery-item slide-in-right">
-          <img src="_images/Certificate 1.jpg" alt="Certificate 1">
-          <div class="gallery-overlay">
-            <h3>Frontend Development - HTML</h3>
-          </div>
+      </div>
+      <div class="gallery-item">
+        <img src="_images/IBM-Certificate.jpg" alt="IBM Certificate">
+        <div class="gallery-overlay">
+          <h3>IBM Certificate</h3>
+          <p>Cloud-Native Development</p>
         </div>
-        
-        <div class="gallery-item slide-in-left">
-          <img src="_images/Certificate 2.jpg" alt="Certificate 2">
-          <div class="gallery-overlay">
-            <h3>Machine Learning Certification</h3>
-          </div>
+      </div>
+      <div class="gallery-item">
+        <img src="_images/On-Job-Training-Certificate.jpg" alt="On-Job Training">
+        <div class="gallery-overlay">
+          <h3>On-Job Training</h3>
+          <p>Rooman Technologies</p>
         </div>
-        
-        <div class="gallery-item slide-in-right">
-          <img src="_images/Certificate 3.jpg" alt="Certificate 3">
-          <div class="gallery-overlay">
-            <h3>Introduction to Artificial Intelligence</h3>
-          </div>
+      </div>
+      <div class="gallery-item">
+        <img src="_images/Diploma Degree.jpg" alt="Diploma Certificate">
+        <div class="gallery-overlay">
+          <h3>Diploma Degree</h3>
+          <p>Computer Science</p>
         </div>
-        
-        <div class="gallery-item slide-in-left">
-          <img src="_images/IBM-Certificate.jpg" alt="IBM Certificate">
-          <div class="gallery-overlay">
-            <h3>Cloud-Native Application Development with IBM Cloud and Kubernetes</h3>
-          </div>
+      </div>
+      <div class="gallery-item">
+        <img src="_images/Relieving Letter.jpg" alt="Relieving Letter">
+        <div class="gallery-overlay">
+          <h3>Relieving Letter</h3>
+          <p>Work Experience</p>
         </div>
-        
-        <div class="gallery-item slide-in-right">
-          <img src="_images/On-Job-Training-Certificate.jpg" alt="On-Job Training Certificate">
-          <div class="gallery-overlay">
-            <h3>On-Job Training Program</h3>
-          </div>
+      </div>
+      <div class="gallery-item">
+        <img src="_images/Certificate 1.jpg" alt="Certificate 1">
+        <div class="gallery-overlay">
+          <h3>Certificate 1</h3>
+          <p>Frontend Development</p>
         </div>
-        
-        <div class="gallery-item slide-in-left">
-          <img src="_images/Certificate 4.jpg" alt="Certificate 4">
-          <div class="gallery-overlay">
-            <h3>Programming Certification</h3>
-          </div>
+      </div>
+      <div class="gallery-item">
+        <img src="_images/Certificate 2.jpg" alt="Certificate 2">
+        <div class="gallery-overlay">
+          <h3>Certificate 2</h3>
+          <p>Machine Learning</p>
         </div>
-        
-        <div class="gallery-item slide-in-right">
-          <img src="_images/Certificate 5.jpg" alt="Certificate 5">
-          <div class="gallery-overlay">
-            <h3>Data Science Certification</h3>
-          </div>
+      </div>
+      <div class="gallery-item">
+        <img src="_images/Certificate 3.jpg" alt="Certificate 3">
+        <div class="gallery-overlay">
+          <h3>Certificate 3</h3>
+          <p>Introduction to AI</p>
         </div>
-        
-        <div class="gallery-item slide-in-left">
-          <img src="_images/Certificate 6.jpg" alt="Certificate 6">
-          <div class="gallery-overlay">
-            <h3>Web Development Certification</h3>
-          </div>
+      </div>
+      <div class="gallery-item">
+        <img src="_images/Certificate 4.jpg" alt="Certificate 4">
+        <div class="gallery-overlay">
+          <h3>Certificate 4</h3>
+          <p>Additional Certification</p>
         </div>
-        
-        <div class="gallery-item slide-in-right">
-          <img src="_images/Certificate 7.jpg" alt="Certificate 7">
-          <div class="gallery-overlay">
-            <h3>Database Management Certification</h3>
-          </div>
+      </div>
+      <div class="gallery-item">
+        <img src="_images/Certificate 5.jpg" alt="Certificate 5">
+        <div class="gallery-overlay">
+          <h3>Certificate 5</h3>
+          <p>Additional Certification</p>
         </div>
-        
-        <div class="gallery-item slide-in-left">
-          <img src="_images/Certificate 8.jpg" alt="Certificate 8">
-          <div class="gallery-overlay">
-            <h3>Cloud Computing Certification</h3>
-          </div>
+      </div>
+      <div class="gallery-item">
+        <img src="_images/Certificate 6.jpg" alt="Certificate 6">
+        <div class="gallery-overlay">
+          <h3>Certificate 6</h3>
+          <p>Additional Certification</p>
         </div>
-        
-        <div class="gallery-item slide-in-right">
-          <img src="_images/Marksheet-of-AI-DevOps-Engineer-Certificate.jpg" alt="AI-DevOps Engineer Marksheet">
-          <div class="gallery-overlay">
-            <h3>AI-DevOps Engineer Marksheet</h3>
-          </div>
+      </div>
+      <div class="gallery-item">
+        <img src="_images/Certificate 7.jpg" alt="Certificate 7">
+        <div class="gallery-overlay">
+          <h3>Certificate 7</h3>
+          <p>Additional Certification</p>
         </div>
-
-        <div class="gallery-item slide-in-left">
-          <img src="_images/Advance Java Programming.jpg" alt="Advance Java Programming">
-          <div class="gallery-overlay">
-            <h3>Advance Java Programming</h3>
-          </div>
+      </div>
+      <div class="gallery-item">
+        <img src="_images/Certificate 8.jpg" alt="Certificate 8">
+        <div class="gallery-overlay">
+          <h3>Certificate 8</h3>
+          <p>Additional Certification</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="_images/Advance Java Programming.jpg" alt="Advance Java Programming">
+        <div class="gallery-overlay">
+          <h3>Advance Java</h3>
+          <p>Programming Certificate</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="_images/Marksheet-of-AI-DevOps-Engineer-Certificate.jpg" alt="Marksheet">
+        <div class="gallery-overlay">
+          <h3>Marksheet</h3>
+          <p>AI-DevOps Engineer</p>
         </div>
       </div>
     </div>
-    
-    <button class="gallery-nav gallery-next" id="galleryNext">›</button>
   </div>
   
-  <div class="gallery-dots" id="galleryDots"></div>
+  <div id="galleryDots" class="gallery-dots"></div>
 </section>
 
 <!-- Contact Section -->
@@ -630,18 +681,48 @@
 <script src="simple-gallery.js"></script>
 <script src="skills.js"></script>
 <script src="projects.js"></script>
-<script src="script.js"></script>
 <script src="animations.js"></script>
 <script src="progress-indicator.js"></script>
 <script src="about-typing.js"></script>
 <script src="home-arrow.js"></script>
-  <script src="home-arrow.js"></script>
   <script src="contact-handler.js"></script>
 <script src="project-tracking.js"></script>
+    <!-- AI Video Introduction Modal -->
+    <div id="aiVideoModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-robot"></i> AI Video Introduction</h2>
+                <span id="closeModal" class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="ai-avatar-section">
+                    <div class="ai-avatar" id="aiAvatar">
+                        <img src="_images/your-photo.jpg" alt="S K Ismail" />
+                    </div>
+                    <button id="ttsPlayBtn" class="tts-play-btn">
+                        <i class="fas fa-volume-up fa-3x"></i>
+                    </button>
+                </div>
+                <div class="ai-tech-stack">
+                    <h4>AI Avatar Powered By:</h4>
+                    <div class="tech-options">
+                        <span class="tech-option"><i class="fas fa-brain"></i> Tavus</span>
+                        <span class="tech-option"><i class="fas fa-video"></i> HeyGen</span>
+                        <span class="tech-option"><i class="fas fa-film"></i> Synthesia</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back To Top Button -->
+    <button id="backToTop" class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
 <script> 
 const icons = document.querySelectorAll('.icon-box'); 
 const section = document.querySelector('#expertise'); 
- 
+
 const observer = new IntersectionObserver(entries => { 
     entries.forEach(entry => { 
         if (entry.isIntersecting) { 
@@ -651,8 +732,109 @@ const observer = new IntersectionObserver(entries => {
         } 
     }); 
 }, { threshold: 0.3 }); 
- 
+
 observer.observe(section); 
+
+// Click to toggle skill name display
+icons.forEach(iconBox => {
+    iconBox.addEventListener('click', function() {
+        icons.forEach(box => {
+            if (box !== this) {
+                box.classList.remove('active');
+            }
+        });
+        this.classList.toggle('active');
+    });
+});
+
+document.addEventListener('click', function(e) {
+    if (!e.target.closest('.icon-box')) {
+        icons.forEach(box => {
+            box.classList.remove('active');
+        });
+    }
+});
+
+// AI Video Modal
+const aiVideoBtn = document.getElementById('aiVideoBtn');
+const aiVideoModal = document.getElementById('aiVideoModal');
+const closeModal = document.getElementById('closeModal');
+const ttsPlayBtn = document.getElementById('ttsPlayBtn');
+const aiAvatar = document.getElementById('aiAvatar');
+
+let speechSynthesisUtterance;
+let voices = [];
+
+// Load voices
+function loadVoices() {
+    voices = window.speechSynthesis.getVoices();
+}
+
+if (speechSynthesis.onvoiceschanged !== undefined) {
+    speechSynthesis.onvoiceschanged = loadVoices;
+}
+
+loadVoices();
+
+aiVideoBtn.addEventListener('click', () => {
+    aiVideoModal.style.display = 'flex';
+});
+
+closeModal.addEventListener('click', () => {
+    aiVideoModal.style.display = 'none';
+    window.speechSynthesis.cancel();
+});
+
+window.addEventListener('click', (e) => {
+    if (e.target === aiVideoModal) {
+        aiVideoModal.style.display = 'none';
+        window.speechSynthesis.cancel();
+    }
+});
+
+// Text-to-Speech Functionality
+const introText = "Hello, I'm S K Ismail. I'm an AIML Engineer specializing in Artificial Intelligence, Machine Learning, Web Development, and DevOps practices. Let me take you through my portfolio!";
+
+function getMaleVoice() {
+    const allVoices = window.speechSynthesis.getVoices();
+    console.log('Available voices:', allVoices); // For debugging
+
+    // Look for male voices with more flexible keywords
+    let maleVoice = allVoices.find(voice => 
+        voice.name.toLowerCase().includes('male') ||
+        voice.name.toLowerCase().includes('man') ||
+        voice.name.toLowerCase().includes('google uk english male') ||
+        voice.name.toLowerCase().includes('google us english male') ||
+        voice.name.toLowerCase().includes('daniel') ||
+        voice.name.toLowerCase().includes('alex') ||
+        voice.name.toLowerCase().includes('fred')
+    );
+
+    if (maleVoice) return maleVoice;
+
+    // Fall back to lower-pitched voices (usually male)
+    return allVoices.find(voice => voice.lang.startsWith('en')) || allVoices[0];
+}
+
+ttsPlayBtn.addEventListener('click', () => {
+    if (window.speechSynthesis.speaking) {
+        window.speechSynthesis.cancel();
+        ttsPlayBtn.innerHTML = '<i class="fas fa-volume-up fa-3x"></i>';
+        aiAvatar.classList.remove('talking');
+    } else {
+        speechSynthesisUtterance = new SpeechSynthesisUtterance(introText);
+        speechSynthesisUtterance.rate = 0.9;
+        speechSynthesisUtterance.pitch = 0.7; // Lower pitch for more masculine sound
+        speechSynthesisUtterance.voice = getMaleVoice();
+        speechSynthesisUtterance.onend = () => {
+            ttsPlayBtn.innerHTML = '<i class="fas fa-volume-up fa-3x"></i>';
+            aiAvatar.classList.remove('talking');
+        };
+        window.speechSynthesis.speak(speechSynthesisUtterance);
+        ttsPlayBtn.innerHTML = '<i class="fas fa-stop-circle fa-3x"></i>';
+        aiAvatar.classList.add('talking');
+    }
+});
 </script> 
 </body>
 </html>
