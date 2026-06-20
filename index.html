@@ -19,8 +19,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Main CSS -->
-  <link rel="stylesheet" href="style.css?v=2">
-  <link rel="stylesheet" href="gallery.css?v=2">
+  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="gallery.css?v=3">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -793,27 +793,25 @@ window.addEventListener('click', (e) => {
 });
 
 // Text-to-Speech Functionality
-const introText = "Hello, I'm S K Ismail. I'm an AIML Engineer specializing in Artificial Intelligence, Machine Learning, Web Development, and DevOps practices. Let me take you through my portfolio!";
+const introText = "Good day, welcome to my portfolio. I'm S K Ismail, an AIML Engineer specializing in Artificial Intelligence, Machine Learning, Web Development, and DevOps practices. It is a pleasure to have you here. Please, allow me to take you through my work and achievements.";
 
 function getMaleVoice() {
     const allVoices = window.speechSynthesis.getVoices();
-    console.log('Available voices:', allVoices); // For debugging
+    console.log('Available voices:', allVoices);
 
-    // Look for male voices with more flexible keywords
-    let maleVoice = allVoices.find(voice => 
-        voice.name.toLowerCase().includes('male') ||
-        voice.name.toLowerCase().includes('man') ||
-        voice.name.toLowerCase().includes('google uk english male') ||
-        voice.name.toLowerCase().includes('google us english male') ||
-        voice.name.toLowerCase().includes('daniel') ||
-        voice.name.toLowerCase().includes('alex') ||
-        voice.name.toLowerCase().includes('fred')
-    );
+    // Prioritize specific male voices
+    const priorityNames = [
+        'daniel', 'alex', 'fred', 'george', 'tom', 'sam', 
+        'google uk english male', 'google us english male', 'male'
+    ];
+    
+    for (const name of priorityNames) {
+        const voice = allVoices.find(v => v.name.toLowerCase().includes(name));
+        if (voice) return voice;
+    }
 
-    if (maleVoice) return maleVoice;
-
-    // Fall back to lower-pitched voices (usually male)
-    return allVoices.find(voice => voice.lang.startsWith('en')) || allVoices[0];
+    // Fall back to English voices
+    return allVoices.find(v => v.lang.startsWith('en')) || allVoices[0];
 }
 
 ttsPlayBtn.addEventListener('click', () => {
@@ -823,8 +821,8 @@ ttsPlayBtn.addEventListener('click', () => {
         aiAvatar.classList.remove('talking');
     } else {
         speechSynthesisUtterance = new SpeechSynthesisUtterance(introText);
-        speechSynthesisUtterance.rate = 0.9;
-        speechSynthesisUtterance.pitch = 0.7; // Lower pitch for more masculine sound
+        speechSynthesisUtterance.rate = 0.85; // Slightly slower for gentlemanly pace
+        speechSynthesisUtterance.pitch = 0.6; // Lower pitch for more masculine, gentlemanly sound
         speechSynthesisUtterance.voice = getMaleVoice();
         speechSynthesisUtterance.onend = () => {
             ttsPlayBtn.innerHTML = '<i class="fas fa-volume-up fa-3x"></i>';

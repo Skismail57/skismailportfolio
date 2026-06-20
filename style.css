@@ -237,8 +237,13 @@ nav {
 }
 
 nav.scrolled {
-  background: transparent;
+  background: rgba(128, 128, 128, 0.9);
+  backdrop-filter: blur(10px);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode nav.scrolled {
+  background: rgba(45, 27, 78, 0.9);
 }
 
 nav.scrolled .logo,
